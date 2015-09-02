@@ -1,0 +1,115 @@
+<html>
+<head>
+	<title>harray test js api api api api api api api api</title>
+	<meta http-equiv="Content-Type"  content="text/html;charset=utf8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<script language="JavaScript" src="testjs.js"></script>
+	<script type="text/javascript">
+		function openPage() {
+			window.open("secondPage.html");
+		}
+		function locationPage() {
+			window.location.href="secondPage.html";
+		}
+	</script>
+</head>
+<body>
+<B>harray test jsapi page</B>
+
+<div>
+	<button onclick="download()">download</button>
+	<button onclick="toast()">toast</button>
+	<button onclick="qqVip2WX()">qqVip2WX</button>
+	<br><B>Weixin</B><br>
+	<button onclick="launchAppPkgName('weixin')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('weixin')">launchAppScheme</button>
+	<br><B>QQ</B><br>
+	<button onclick="launchAppPkgName('mqqapi')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('mqqapi')">launchAppScheme</button>
+	<br><B>腾讯新闻</B><br>
+	<button onclick="launchAppPkgName('qqnews')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('qqnews')">launchAppScheme</button>
+	<br><B>QQ浏览器</B><br>
+	<button onclick="launchAppPkgName('mqqbrowser')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('mqqbrowser')">launchAppScheme</button>
+	<br><B>QQ浏览器</B><br>
+	<button onclick="launchAppPkgName('abc')">launchAppPkgName:abc</button>
+	<button onclick="launchAppSchemeWithParam('weixin')">launchAppSchemeWithParam:weixin</button>
+	<button onclick="launchAppSchemeWithParam('abc')">launchAppSchemeWithParam:abc</button>
+	<br>
+	<button onclick="launchTencentVideo()">launchTencentVideo</button>
+	<br>
+	<br>
+	<button onclick="openPage()">open page</button>
+	<button onclick="locationPage()">location page</button>
+	<a href="secondPage.html">href</a>
+	<button onclick="openUrl('http://harray.qq.com/jsapi/secondPage.html')">openUrl()</button>
+	<br><br>
+	<button onclick="goBack()">goBack</button>
+	<button onclick="aclose()">close</button>
+	<br><br>
+    <button onclick="clickToastBtn()">toast</button>
+    <button onclick="SetMoreInfo()">SetMoreInfo</button>
+    <!--<button onclick="jumpInVideo()">jumpInVideo</button>-->
+    <button onclick="testCallback()">testCallback</button>
+    <button onclick="gotoHomepage()">gotoHomepage</button>
+    <!--<button id="btn_rain" onclick="showBackground()">rain</button>-->
+    <button onclick="checkApi()">checkApi</button><br><br>
+    <B>Login</B><br>
+    <button onclick="login('qq')">loginQQ</button>
+    <button onclick="login('wx')">loginWX</button>
+    <button onclick="login('tv')">loginTV</button>
+    <button onclick="getMainLogin()">getMainLogin</button><br><br>
+    <B>Check Login</B><br>
+    <button onclick="getUserInfo(['qq','wx', 'tv'])">getUserInfo(['qq','wx', 'tv'])</button>
+    <button onclick="getCookie(['qq','wx','tv'])">getCookie(['qq','wx','tv'])</button><br><br>
+    <button onclick="getMainCookie()">getMainCookie</button>
+    <!--<button onclick="actionPlay({'vid':'b0016r7wjxj'})">actionPlay</button>-->
+    <button onclick="getAppInfo()">getAppInfo</button>
+    <button onclick="getDeviceInfo()">getDeviceInfo</button><br><br>
+    <button onclick="getMainLoginType()">getMainLoginType</button>
+    <button onclick="getMainUserInfo()">getMainUserInfo</button>
+    <button onclick="openToolsDialog()">openToolsDialog</button><br><br>
+    <button onclick="isAppInstalled()">isWeiXinInstalled</button>
+    <button onclick="isAppInstalled1()">isWeiXinInstalled1</button>
+    <button onclick="launchApp()">launchApp</button>
+    <button onclick="cacheVideo()">cacheVideo</button><br><br>
+    <button onclick="getNetworkState()">getNetworkState</button>
+    <button onclick="getLocation()">getLocation</button>
+    <button onclick="downloadFile()">downloadFile</button><br><br>
+    <button onclick="getPayVip()">getPayVip</button>
+    <button onclick="getTicketNum()">getTicketNum</button><br><br>
+    <button onclick="openView('tenvideo2://?action=45&newtenvideo2=1&dataKey=637&title=harray3%e6%b5%8b%e8%af%95&callback=weixin%3A%2F%2F&sender=weixin')">openView游戏底层页</button>
+    
+    <br><br>
+    
+    <button onclick="shareInfo('shareWeixinTimeline')">shareWeiXinTimeline</button>
+    <button onclick="shareInfo('shareWeixinUser')">shareWeiXinUser</button>
+    <button onclick="shareInfo('shareQQUser')">shareQQUser</button><br><br>
+    <button onclick="shareInfo('shareQzone')">shareQzone</button>
+    <button onclick="shareInfo('shareTxWeibo')">shareTxWeibo</button>
+    <button onclick="shareInfo('shareSinaWeibo')">shareSinaWeibo</button><br><br>
+    <button onclick="actionFollow('lid')">栏目关注</button>
+    <button onclick="actionFollow('cid')">专辑关注</button>
+    <button onclick="actionFollow('vid')">单视频关注</button><br><br>
+    <button onclick="actionFollow('gamepid')">游戏直播关注</button>
+    <button onclick="actionFollow('sportpid')">体育直播关注</button>
+    <button onclick="actionFollow('newpid')">新直播关注</button><br><br>
+    <button onclick="getLocation()">getLocation</button>
+    <button onclick="openToolsDialog()">openToolsDialog</button><br><br>
+    <input type="file" id="file"/>
+    <input type="button" value="读取二进制" onclick="readAsbinaryString()"/>
+	<!--<input type="file" onchange="onFileChanged(this)"/>-->
+    <!--<button onclick="gotoDouban()">gotoDouban</button>-->
+    <!--<button onclick="hideH5()">hideH5</button>-->
+
+</div>
+<div>
+
+</div>
+<div id="hello_div"></div>
+<div>
+	<img id="img1" src=""/>
+</div>
+</body>
+</html>
