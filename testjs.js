@@ -451,3 +451,7 @@
 		TenvideoJSBridge.invoke('toast', content, function(ret){
 		});
 	}
+	
+	function jsAlert() {
+		alert("in js file");
+	}
