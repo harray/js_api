@@ -460,12 +460,16 @@
 				TenvideoJSBridge.invoke('toast', content, function(ret){
 				});
 			}
+			function test() {
+				alert("harray test");
+			}
 	</script>
 </head>
 <body>
 <B>harray test jsapi page</B>
 
 <div>
+	<button onclick="test()">just test</button><br /><br />
 	<button onclick="download()">download</button>
 	<button onclick="toast()">toast</button>
 	<button onclick="qqVip2WX()">qqVip2WX</button>
