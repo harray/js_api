@@ -387,6 +387,7 @@
 		TenvideoJSBridge.invoke('getPayVip', null, function(ret){
 			console.log(ret);
 			var jret = JSON.parse(ret);
+			alert(ret);
 //			alert("getPayVip: " + JSON.stringify(jret.result));
 		});
 	}
