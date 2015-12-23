@@ -369,14 +369,7 @@
 			printLog(ret);
 		});
 	}
-	function getLocation(){
-		TenvideoJSBridge.invoke('getLocation', null, function(ret){
-			alert("test");
-			var jret = JSON.parse(ret);
-//			alert("getLocation: " + JSON.stringify(jret.result));
-			printLog(ret);
-		});
-	}
+
 	function downloadFile(){
 		TenvideoJSBridge.invoke('downloadFile', {"url":"http://img5.douban.com/view/photo/photo/public/p2235250327.jpg"}, function(ret){
 			var jret = JSON.parse(ret);
@@ -393,7 +386,7 @@
 	}
 	function getTicketNum(){
 		TenvideoJSBridge.invoke('getTicketNum', null, function(ret){
-			console.log(ret);
+			console.log(ret); 
 			var jret = JSON.parse(ret);
 //			alert("getTicketNum: " + JSON.stringify(jret.result));
 			alert(ret);
