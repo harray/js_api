@@ -393,7 +393,7 @@
 	}
 	function getTicketNum(){
 		TenvideoJSBridge.invoke('getTicketNum', null, function(ret){
-			console.log(ret);
+			console.log(ret); 
 			var jret = JSON.parse(ret);
 //			alert("getTicketNum: " + JSON.stringify(jret.result));
 			alert(ret);
