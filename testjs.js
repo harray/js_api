@@ -182,6 +182,18 @@
 		});
 	}
 	
+	function preViewPhotos() {
+		TenvideoJSBridge.invoke('preViewPhotos', {'photopaths':['http://i.gtimg.cn/qqlive/img/jpgcache/files/qqvideo/w/w7ju7urc1x4w3jc.jpg','http://i.gtimg.cn/qqlive/images/still/files/05/05sbd8687.jpg']}, function(ret){
+			alert(ret);
+		});
+	}
+
+	function copyToClipBoard() {
+		TenvideoJSBridge.invoke('copyToClipBoard', {'content':'The copy content'}, function(ret){
+			alert(ret);
+		});
+	}
+	
 	function openToolsDialog() {
 		TenvideoJSBridge.invoke('openToolsDialog', null, function(ret){
 			alert(ret);
@@ -375,6 +387,7 @@
 		TenvideoJSBridge.invoke('getPayVip', null, function(ret){
 			console.log(ret);
 			var jret = JSON.parse(ret);
+			alert(ret);
 //			alert("getPayVip: " + JSON.stringify(jret.result));
 		});
 	}
