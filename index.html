@@ -14,20 +14,27 @@
 		function test() {
 			alert("harray test");
 		}
+        function getInfo() {
+            document.getElementById("name").text = "";
+            document.getElementById("mainLogin").text = "";
+            document.getElementById("isVip").text = "";
+            document.getElementById("vipLevel").text = "";
+            
+        }
 	</script>
 </head>
-<body>
+<body onload="getInfo()">
 <B>harray test jsapi page</B>
 
 <div>
     <B>测试页面来着</B>
     <br>
-    您当前登录的用户为：<br>
-    头像为：<br>
-    主登录为：<br>
-    是会员么：<br>
-    会员等级为：<br>
-    当前位置为：<br>
+    您当前登录的用户为：<input type='text' id='name'/><br>
+    头像为：<input type='text' id='name'/><br>
+    主登录为：<input type='text' id='mainLogin'/><br>
+    是会员么：<input type='text' id='isVip'/><br>
+    会员等级为：<input type='text' id='vipLevel'/><br>
+    当前位置为：<input type='text' id='location'/><br>
 
     <!--
 	<button onclick="test()">just test</button>
