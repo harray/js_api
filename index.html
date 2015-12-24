@@ -19,7 +19,7 @@
             document.getElementById("mainLogin").text = "";
             document.getElementById("isVip").text = "";
             document.getElementById("vipLevel").text = "";
-            
+
         }
 	</script>
 </head>
@@ -27,14 +27,19 @@
 <B>harray test jsapi page</B>
 
 <div>
+    <br><br><br>
     <B>测试页面来着</B>
     <br>
     您当前登录的用户为：<input type='text' id='name'/><br>
-    头像为：<input type='text' id='name'/><br>
+    号码为：<input type='text' id='uin'/><br>
+    头像为：<br>
+    <img id='headImage'>    
+    <br>
     主登录为：<input type='text' id='mainLogin'/><br>
     是会员么：<input type='text' id='isVip'/><br>
     会员等级为：<input type='text' id='vipLevel'/><br>
     当前位置为：<input type='text' id='location'/><br>
+    <button onclick="getPageInfo()">获取信息</button>
 
     <!--
 	<button onclick="test()">just test</button>
