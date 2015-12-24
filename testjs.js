@@ -83,6 +83,44 @@
            });
     }
 
+    function getPageInfo() {
+		TenvideoJSBridge.invoke('getMainUserInfo', null, function(ret){
+			var jret = JSON.parse(ret);
+			var type = jret.result.type;
+			if (type == 'wx') {
+				var uin = jret.result.userInfo.openId;
+				var nickname = jret.result.userInfo.nickname;
+				var userImage = jret.result.userInfo.headImgUrl;
+				
+			} else if (type == 'qq') {
+				var uin = jret.result.userInfo.uin;
+				var nickname = jret.result.userInfo.nickname;
+				var userImage = jret.result.userInfo.headImgUrl;
+			} else {
+				var uin = '';
+				var nickname = '';
+				var userImage = '';
+				var type = '未登录~~~';
+			}
+			document.getElementById('mainLogin').value = type;
+			document.getElementById('uin').value = uin;
+			document.getElementById('name').value = nickname;
+			document.getElementById('headImage').src = userImage;
+		});
+		TenvideoJSBridge.invoke('getPayVip', null, function(ret){
+			var jret = JSON.parse(ret);
+			var isVip = JSON.stringify(jret.result.vip);
+			var vipLevel = JSON.stringify(jret.result.level);
+			document.getElementById('isVip').value = isVip;
+			document.getElementById('vipLevel').value = vipLevel;
+		});
+		TenvideoJSBridge.invoke('getLocation', null, function(ret){
+			var jret = JSON.parse(ret);
+			var location = jret.result.poiName;
+			document.getElementById('location').value = location;
+		});
+	}
+
     function refreshPage(){
     	TenvideoJSBridge.invoke("refreshPage");
     }
