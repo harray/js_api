@@ -22,56 +22,56 @@
             TenvideoJSBridge.toast("orientation_change");
          });
         TenvideoJSBridge.on("onShareQQUser", function(){
-      		alert("onShareQQUser");
+      		// alert("onShareQQUser");
 			shareInfo("shareQQUser");
          });
         TenvideoJSBridge.on("onShareQZone", function(){
-      		alert("onShareQZone");
+      		// alert("onShareQZone");
 			shareInfo("shareQzone");
          });
         TenvideoJSBridge.on("onShareSinaWeibo", function(){
-      		alert("onShareSinaWeibo");
+      		// alert("onShareSinaWeibo");
 			shareInfo("shareSinaWeibo");
          });
         TenvideoJSBridge.on("onShareTXWeibo", function(){
-      		alert("onShareTXWeibo");
+      		// alert("onShareTXWeibo");
 			shareInfo("shareTxWeibo");
          });
         TenvideoJSBridge.on("onShareWeixinTimeline", function(){
-      		alert("onShareWeixinTimeline");
+      		// alert("onShareWeixinTimeline");
 			//shareInfo("shareWeixinTimeline");
          });
         TenvideoJSBridge.on("onShareWeixinUser", function(){
-      		alert("onShareWeixinUser");
+      		// alert("onShareWeixinUser");
 			shareInfo("shareWeixinUser");
          });
         TenvideoJSBridge.on("onShareVideoCircle", function(){
-      		alert("onShareVideoCircle");
+      		// alert("onShareVideoCircle");
 			shareInfo("shareVideoCircle");
          });
         TenvideoJSBridge.on("onRefresh", function(){
-      		alert("onRefresh");
+      		// alert("onRefresh");
       		refreshPage();
          });
         TenvideoJSBridge.on("onFollow", function(){
-      		alert("onFollow");
+      		// alert("onFollow");
          });
          TenvideoJSBridge.on("onShareFinish", function(ret){
             var jret = JSON.parse(ret);
-			alert("onShareFinish " + JSON.stringify(jret.result));
+			// alert("onShareFinish " + JSON.stringify(jret.result));
          });
          TenvideoJSBridge.on("onShareWeixinTimelineFinish", function(){
-       		alert("onShareWeixinTimelineFinish");
+       		// alert("onShareWeixinTimelineFinish");
  			//shareInfo("shareWeixinTimeline");
           });
          TenvideoJSBridge.on("onActionLoginFinish", function(ret){
-			alert("onActionLoginFinish: " + ret);
+			// alert("onActionLoginFinish: " + ret);
          });
          TenvideoJSBridge.on("onActionLogoutFinish", function(ret){
- 			alert("onActionLogoutFinish: " + ret);
+ 			// alert("onActionLogoutFinish: " + ret);
           });
          TenvideoJSBridge.on("onActionLogin", function(ret){
- 			alert("onActionLogin: " + ret);
+ 			// alert("onActionLogin: " + ret);
           });
          TenvideoJSBridge.on("onActionFollow", function(ret){
 // 			alert("onActionFollow: " + ret);
@@ -79,7 +79,7 @@
          TenvideoJSBridge.on("onActionFollowFinish", function(ret){
 //  			alert("onActionFollowFinish: " + ret);
   			var jret = JSON.parse(ret);
-			alert("harray ActionFollowFinish: " + JSON.stringify(jret.errCode));
+			// alert("harray ActionFollowFinish: " + JSON.stringify(jret.errCode));
            });
     }
 
@@ -218,6 +218,15 @@
 		TenvideoJSBridge.invoke('getMainLogin', null, function(ret){
 			alert(ret);
 			var jret = JSON.parse(ret);
+//			alert(JSON.stringify(jret.result));
+		});
+	}
+
+	function getMainLoginInfo() {
+		TenvideoJSBridge.invoke('getMainLogin', null, function(ret){
+			// alert(ret);
+			var jret = JSON.parse(ret);
+			return JSON.stringify(jret.result);
 //			alert(JSON.stringify(jret.result));
 		});
 	}
