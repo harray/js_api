@@ -509,9 +509,9 @@
 		alert("in js file");
 	}
 	
-	function switchLogin()
+	function switchLogin(type)
 	{
-		TenvideoJSBridge.invoke('switchLoginState', {'userType':'wx'}, function(ret){
+		TenvideoJSBridge.invoke('switchLoginState', {'userType':type}, function(ret){
 			var jret = JSON.parse(ret);
 			printLog(ret);
 		});
