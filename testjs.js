@@ -511,7 +511,7 @@
 	
 	function switchLogin()
 	{
-		TenvideoJSBridge.invoke('switchLoginState', {'userType':'qq'}, function(ret){
+		TenvideoJSBridge.invoke('switchLoginState', {'userType':'wx'}, function(ret){
 			var jret = JSON.parse(ret);
 			printLog(ret);
 		});
