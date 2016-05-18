@@ -508,3 +508,11 @@
 	function jsAlert() {
 		alert("in js file");
 	}
+	
+	function switchLogin()
+	{
+		TenvideoJSBridge.invoke('switchLoginState', {'userType':'qq'}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});
+	}
