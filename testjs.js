@@ -516,3 +516,12 @@
 			printLog(ret);
 		});
 	}
+	
+	function showMessageBtn()
+	{
+		TenvideoJSBridge.invoke('showMessageBtn', {'unReadNum':3, 'url':'http://www.qq.com'}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});		
+	}
+		
