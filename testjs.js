@@ -519,7 +519,7 @@
 	
 	function showMessageBtn()
 	{
-		TenvideoJSBridge.invoke('showMessageButton', {'unReadNum':3, 'url':'http://www.qq.com', 'show':0}, function(ret){
+		TenvideoJSBridge.invoke('showMessageButton', {'unReadNum':3, 'url':'http://www.qq.com', 'show':1}, function(ret){
 			var jret = JSON.parse(ret);
 			printLog(ret);
 		});		
