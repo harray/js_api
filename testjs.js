@@ -532,3 +532,12 @@
 			printLog(ret);
 		});		
 	}
+	
+	function jumpWXBizProfile()
+	{
+		TenvideoJSBridge.invoke('jumpWXBizProfile', {'profileId':'gh_ed3ec632757b', 'extMsg':'user'}, function(ret){
+			var jret = JSON.parse(ret);
+			alert("jret");
+		});		
+	}
+	
