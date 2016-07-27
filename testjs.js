@@ -535,7 +535,7 @@
 	
 	function jumpWXBizProfile()
 	{
-		TenvideoJSBridge.invoke('jumpWXBizProfile', {'profileId':'videoilove', 'extMsg':'user'}, function(ret){
+		TenvideoJSBridge.invoke('jumpWXBizProfile', {'profileId':'cll_qq', 'extMsg':'user'}, function(ret){
 			var jret = JSON.parse(ret);
 			alert("jret");
 		});		
