@@ -541,3 +541,11 @@
 		});		
 	}
 	
+	function genPropertyTansTK()
+	{
+		TenvideoJSBridge.invoke('genPropertyTansTK', null, function(ret){
+			var jret = JSON.parse(ret);
+			alert("jret");
+		});		
+	}
+	
