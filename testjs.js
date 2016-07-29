@@ -537,7 +537,7 @@
 	{
 		TenvideoJSBridge.invoke('jumpWXBizProfile', {'profileId':'cll_qq', 'extMsg':'user'}, function(ret){
 			var jret = JSON.parse(ret);
-			alert("jret");
+			alert(jret);
 		});		
 	}
 	
@@ -545,7 +545,7 @@
 	{
 		TenvideoJSBridge.invoke('genPropertyTansTK', null, function(ret){
 			var jret = JSON.parse(ret);
-			alert("jret");
+			alert(jret);
 		});		
 	}
 	
