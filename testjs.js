@@ -541,9 +541,9 @@
 		});		
 	}
 	
-	function genPropertyTansTK()
+	function genTansPropertyTK()
 	{
-		TenvideoJSBridge.invoke('genPropertyTansTK', null, function(ret){
+		TenvideoJSBridge.invoke('genTansPropertyTK', null, function(ret){
 			var jret = JSON.parse(ret);
 			alert(JSON.stringify(jret));
 		});		
