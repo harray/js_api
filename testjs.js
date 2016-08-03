@@ -183,7 +183,7 @@
 		});
 	}
 	function gotoHomepage(){
-		TenvideoJSBridge.invoke("openView", {"url":"txvideo://v.qq.com/HomeActivity?tabIndex=0&channelId=100191"});
+		TenvideoJSBridge.invoke("openView", {"url":"txvideo://v.qq.com/HomeActivity?tabIndex=0&channelId=100191","close":"1"});
 	}
 
 	var isRain = false;
