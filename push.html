@@ -3,6 +3,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </head>
 
 <div style="padding: 16% 10%">
@@ -21,6 +24,19 @@
 		<input type="hidden" name="pushuser" value="adolph"/>
 		<input type="hidden" name="env" value="product"/>
 		<button class="btn btn-success btn-lg btn-block" onclick="submitForm()">点击发送</button>
+		<br>
+		<div class="btn-group" role="group" style="float:right">
+	    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	      常用示例
+	    </button>
+	    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+		<a class="dropdown-item" href="javascript:setDetailPage()">详情页</a>
+		<a class="dropdown-item" href="javascript:setOperationPage()">运营页</a>
+		<a class="dropdown-item" href="javascript:setH5Page()">H5</a>
+		<a class="dropdown-item" href="javascript:setVipPage()">好莱坞开通页</a>
+	    </div>
+
+	  </div>
 	</form>
 </div>
 
@@ -32,5 +48,37 @@ function submitForm()
 	document.getElementById('payload').value = str;
 	console.log(document.getElementById('payload').value);
 	document.myform.submit();
+}
+
+function setDetailPage()
+{
+	var str = '{"aps":{"alert":"Push From Web 详情页，老协议","sound":"default"},"cover_id":"4e62aswdyxgxfzw","cover_type":"0","dest_type":"5","update_num":"1"}'
+	console.log(str);
+	document.getElementById('payload').value = str;
+	console.log(document.getElementById('payload').value);
+}
+
+function setOperationPage()
+{
+	var str = '{"aps":{"alert":"Push From Web 运营页，新协议","sound":"default"},"d":"a=6&t=12024&aid=V0$$1:601$12:yxpush.60242&m=142226&f=142226"}';
+	console.log(str);
+	document.getElementById('payload').value = str;
+	console.log(document.getElementById('payload').value);
+}
+
+function setH5Page()
+{
+	var str = '{"aps":{"alert":"Push From Web H5，新协议","sound":"default"},"d":"a=10&wu=http%3a%2f%2fwww.qq.com"}'
+	console.log(str);
+	document.getElementById('payload').value = str;
+	console.log(document.getElementById('payload').value);
+}
+
+function setVipPage()
+{
+	var str = '{"aps":{"alert":"Push From Web 好莱坞开通页，新协议","sound":"default"},"d":"a=10&wu=tenvideo2%3a%2f%2f%3faction%3d20%26isPush%3d1%26aid%3dV0%24%2412%3aiPho.rmd0"}'
+	console.log(str);
+	document.getElementById('payload').value = str;
+	console.log(document.getElementById('payload').value);
 }
 </script>
