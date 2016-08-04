@@ -1,0 +1,35 @@
+<head>
+	<title>iPhone Push</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+</head>
+
+<div style="padding: 300px 300px 30px;">
+   <form action="http://oss.push.webdev.com/PushApi/iosunicast" method="get" name="myform" class="bs-example bs-example-form" role="form">
+		<input type="hidden" name="bid" value="10012"/>
+		<input type="hidden" name="enable" value="1"/>
+		<input type="hidden" name="expire" value="1000"/>
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">@</span>
+			<input type="text" name="token" placeholder="Token" class="form-control">
+		</div><br>
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">@</span>
+			<textarea type="text" name="payload" id="payload" placeholder="Push内容" class="form-control"></textarea>
+		</div><br>
+		<input type="hidden" name="pushuser" value="adolph"/>
+		<input type="hidden" name="env" value="product"/>
+		<button class="btn btn-success btn-lg btn-block" onclick="submitForm()">点击发送</button>
+	</form>
+</div>
+
+<script>
+function submitForm()
+{
+	var str = document.getElementById("payload").value;
+	console.log(str);
+	document.getElementById('payload').value = str;
+	console.log(document.getElementById('payload').value);
+	document.myform.submit();
+}
+</script>
