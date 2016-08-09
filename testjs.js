@@ -506,6 +506,7 @@
 	}
 	
 	function jsAlert() {
+                alert(TenvideoJSBridge);
 		alert("in js file");
 	}
 	
