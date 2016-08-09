@@ -506,13 +506,9 @@
 	}
 	
 	function jsAlert() {
-		if(TenvideoJSBridge){
-			alert("YES");
-		}else{
-			alert("NO");
-		}
-                alert(TenvideoJSBridge);
-		alert("in js file");
+		alert("jjjjj");
+            
+		
 	}
 	
 	function switchLogin(type)
