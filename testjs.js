@@ -506,7 +506,7 @@
 	}
 	
 	function jsAlert() {
-		alert("jjjjj");
+		alert(window.WebViewJavascriptBridge);
             
 		
 	}
