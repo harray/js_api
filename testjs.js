@@ -240,6 +240,7 @@
 	
 	function download() {
 		TenvideoJSBridge.invoke('download3rdApp', null, function(ret){
+			alert("uuu");
 			alert(ret);
 		});
 	}
