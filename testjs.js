@@ -506,7 +506,7 @@
 	}
 	
 	function jsAlert() {
-		alert(window.WebViewJavascriptBridge);
+		alert(TenvideoJSBridge);
             
 		
 	}
