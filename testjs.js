@@ -13,13 +13,12 @@
     }
     
     function callbackAfterListener(){
-    	alter("callbackAfterListener");
+    	alert("callbackAfterListener");
     	callback();
     }
-
-
+    
     function callback(){
- 	    console.log(window.TenvideoJSBridge);
+ 	console.log(window.TenvideoJSBridge);
         TenvideoJSBridge.invoke("newToast", {"content":"jsapi is ok!"});
         TenvideoJSBridge.on("openvideo", function(){
             TenvideoJSBridge.toast("openvideo");
