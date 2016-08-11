@@ -2,15 +2,21 @@
  * 
  */
 
- if(typeof TenvideoJSBridge == "object"){
+    if(typeof TenvideoJSBridge == "object"){
 	        callback();
-	    } else {
+    } else {
 	        if(document.addEventListener){
-	            document.addEventListener("onTenvideoJSBridgeReady", callback, false);
+	            document.addEventListener("onTenvideoJSBridgeReady", callbackAfterListener, false);
 	        } else if(document.attachEvent){
-	            document.attachEvent("onTenvideoJSBridgeReady", callback);
+	            document.attachEvent("onTenvideoJSBridgeReady", callbackAfterListener);
 	        }
-	    }
+    }
+    
+    function callbackAfterListener(){
+    	alter("callbackAfterListener");
+    	callback();
+    }
+
 
     function callback(){
  	    console.log(window.TenvideoJSBridge);
