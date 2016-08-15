@@ -50,7 +50,7 @@
          
 	function copyClipBoard(param){
 		var copycontent = param + "://";
-		TenvideoJSBridge.invoke('copyToClipBoard', {"content":param}, function(ret){
+		TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
 			alert(ret);
 		});
 	}
