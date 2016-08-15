@@ -46,6 +46,15 @@
       		// alert("onShareWeixinTimeline");
 			//shareInfo("shareWeixinTimeline");
          });
+         
+         
+	function copyClipBoard(param){
+		var copycontent = param + "://";
+		TenvideoJSBridge.invoke('copyToClipBoard', {"content":param}, function(ret){
+			alert(ret);
+		});
+	}
+		
         TenvideoJSBridge.on("onShareWeixinUser", function(){
       		// alert("onShareWeixinUser");
 			shareInfo("shareWeixinUser");
