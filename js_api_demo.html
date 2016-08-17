@@ -57,7 +57,7 @@
       
       function copyToClipBoard(param)
       {
-         var copycontent = document.getElementById('rtxnum').value+" "+"["+param+"]";
+         var copycontent = document.getElementById('rtxnum').value+" "+"["+param+"]"+" ";
          TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
             toast("动态码已经复制到剪切板");
          });
