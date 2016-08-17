@@ -59,13 +59,15 @@
       {
          var copycontent = document.getElementById('rtxnum').value+" "+"["+param+"]";
          TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
-            toast("短信内容已经复制到剪切板");
+            toast("动态码已经复制到剪切板");
          });
       }
       
       function toast(param)
       {
-         TenvideoJSBridge.invoke("newToast", {"content":param});
+         TenvideoJSBridge.invoke('toast', {"content":param}, function(ret){
+            // do nothing
+         });
       }
       
       function getRandom(min, max) 
