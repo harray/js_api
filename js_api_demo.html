@@ -41,7 +41,12 @@
       
       function refreshCode()
       {
-         alert(document.getElementById('dynamiccode'));
+         if (document.getElementById('dynamiccode')) {
+            alert(1);
+         } else {
+            alert(0);
+         }
+         
       }
       
       </script>
