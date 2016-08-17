@@ -65,7 +65,7 @@
       
       function toast(param)
       {
-         TenvideoJSBridge.toast(param);
+         TenvideoJSBridge.invoke("newToast", {"content":param});
       }
       
       function getRandom(min, max) 
