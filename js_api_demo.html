@@ -55,30 +55,35 @@
          copyToClipBoard(span.innerText);
       }
       
-   	function copyToClipBoard(param)
-   	{
-         var copycontent = document.getElementById('phonenum').value+"["+param+"]";
+      function copyToClipBoard(param)
+      {
+         var copycontent = document.getElementById('rtxnum').value+" "+"["+param+"]";
          TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
-         	alert(ret);
+            toast("短信内容已经复制到剪切板");
          });
-   	}
+      }
+      
+      function toast(param)
+      {
+         TenvideoJSBridge.toast(param);
+      }
       
       function getRandom(min, max) 
       {
          return Math.floor(Math.random() * (max - min)) + min;
       }
       
-         if(typeof TenvideoJSBridge == "object")
+      if(typeof TenvideoJSBridge == "object")
       {
-	        initContent();
+            initContent();
       } 
       else 
       {
-	        if(document.addEventListener){
-	            document.addEventListener("onTenvideoJSBridgeReady", callbackAfterListener, false);
-	        } else if(document.attachEvent){
-	            document.attachEvent("onTenvideoJSBridgeReady", callbackAfterListener);
-	        }
+         if(document.addEventListener){
+            document.addEventListener("onTenvideoJSBridgeReady", callbackAfterListener, false);
+         } else if(document.attachEvent){
+            document.attachEvent("onTenvideoJSBridgeReady", callbackAfterListener);
+         }
       }
     
       function callbackAfterListener()
