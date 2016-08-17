@@ -23,7 +23,7 @@
       <div class="container">
       
       <h4> 点击按钮刷新动态码 </h4>
-      <input type="text" class="input input-text2" id="dynamiccode" disabled="disabled" > 
+      <input type="text" class="input input-text2" id="dynamiccode"> 
       <button type="button" class="btn btn-info" onclick="refreshCode()">刷新</button>
       <h4> 手机号码 </h4>
       <input type="text" class="input input-text" id="phonenum" placeholder="请输入手机号码" >
@@ -37,6 +37,11 @@
       {
          var numStr=document.getElementById('phonenum').value;
          window.location.href="sms://"+numStr;
+      }
+      
+      function refreshCode()
+      {
+         alert(document.getElementById('dynamiccode').value);
       }
       
       </script>
