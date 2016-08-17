@@ -23,7 +23,7 @@
       <div class="container">
       
       <h4> 点击按钮刷新动态码 </h4>
-      <span class="label label-default" id="dynamiccode">未知</span>
+      <h4><span class="label label-default" id="dynamiccode">未知</span></h4>
       <button type="button" class="btn btn-info" onclick="refreshCode()">刷新</button>
       <h4> 手机号码 </h4>
       <input type="text" class="input input-text" id="phonenum" placeholder="请输入手机号码" >
@@ -41,8 +41,8 @@
       
       function refreshCode()
       {
-         alert(document.getElementById('dynamiccode').textContent);
-         document.getElementById('dynamiccode').textContent＝"1234546";
+         alert(document.getElementById('dynamiccode').innerHTML);
+         document.getElementById('dynamiccode').innerHTML＝"1234546";
       }
       
       </script>
