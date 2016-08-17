@@ -41,12 +41,8 @@
       
       function refreshCode()
       {
-         if (document.getElementById('dynamiccode')) {
-            alert(document.getElementById('dynamiccode').value);
-         } else {
-            alert(0);
-         }
-         document.getElementById('dynamiccode').value＝"1234546";
+         alert(document.getElementById('dynamiccode').textContent);
+         document.getElementById('dynamiccode').textContent＝"1234546";
       }
       
       </script>
