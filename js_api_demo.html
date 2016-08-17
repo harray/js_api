@@ -37,15 +37,15 @@
       <script>
       function sendMsg()
       {
+         alert("sendMsg");
          var numStr=document.getElementById('phonenum').value;
          window.location.href="sms://"+numStr;
-         alert("sendMsg");
       }
       
       function refreshCode()
       {
-         document.getElementById('dynamiccode').value＝"123456";
          alert("refreshCode");
+         document.getElementById('dynamiccode').value＝"123456";
       }
       
       </script>
