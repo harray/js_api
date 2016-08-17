@@ -53,7 +53,16 @@
          span = document.getElementById('dynamiccode');
          txt = document.createTextNode(getRandom(100000, 999999));
          span.innerText = txt.textContent;
+         
+         copyToClipBoard(span.innerText);
       }
+      
+   	function copyToClipBoard(param){
+   		var copycontent = "["+param+"]";
+   		TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
+   			alert(ret);
+   		});
+   	}
       
       function getRandom(min, max) 
       {
