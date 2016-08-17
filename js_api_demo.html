@@ -43,8 +43,13 @@
       {
          //alert(document.getElementById('dynamiccode').innerHTML);
          span = document.getElementById('dynamiccode');
-         txt = document.createTextNode("123456");
+         txt = document.createTextNode(getRandom(100000, 999999));
          span.innerText = txt.textContent;
+      }
+      
+      function getRandom(min, max) 
+      {
+         return Math.floor(Math.random() * (max - min)) + min;
       }
       
       </script>
