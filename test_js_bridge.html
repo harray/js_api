@@ -1,15 +1,15 @@
 <html>
 <head>
-	<title>harray test js api api api api api api api api</title>
+	<title>test js api</title>
 	<meta http-equiv="Content-Type"  content="text/html;charset=utf8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 	<script language="JavaScript" src="testjs.js"></script>
 	<script type="text/javascript">
 		function openPage() {
-			window.open("secondPage.html");
+			window.open("js_api_demo.html");
 		}
 		function locationPage() {
-			window.location.href="secondPage.html";
+			window.location.href="js_api_demo.html";
 		}
 		function test() {
 			alert("harray test");
@@ -48,6 +48,7 @@
 	<br>
 	<br>
 	<button onclick="openPage()">open page</button>
+    <button onclick="locationPage()">location page</button>
 	<a href="js_api_demo.html">href</a>
 	<button onclick="openUrl('http://harray.qq.com/jsapi/secondPage.html')">openUrl()</button>
 	<br><br>
@@ -110,9 +111,12 @@
     <!--<button onclick="hideH5()">hideH5</button>-->
     
     <br><br>
+    
     <button onclick="switchLogin('qq')">切换帐号QQ</button>
     <button onclick="switchLogin('wx')">切换帐号WX</button>
+
     <br><br>
+    
     <button onclick="showMessageBtn()">显示站内信</button>
     <button onclick="hideMessageBtn()">隐藏站内信</button>
     <button onclick="jumpWXBizProfile()">微信公众号</button>
