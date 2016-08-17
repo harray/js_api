@@ -41,8 +41,10 @@
       
       function refreshCode()
       {
-         alert(document.getElementById('dynamiccode').innerHTML);
-         // document.getElementById('dynamiccode').innerHTML＝"1234546";
+         //alert(document.getElementById('dynamiccode').innerHTML);
+         span = document.getElementById('dynamiccode');
+         txt = document.createTextNode("123456");
+         span.innerText = txt.textContent;
       }
       
       </script>
