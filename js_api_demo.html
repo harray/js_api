@@ -50,6 +50,7 @@
       
       function sendMsg()
       {
+         span = document.getElementById('dynamiccode');
          copyToClipBoard(span.innerText, false);
          var numStr="1234565432108000";
          window.location.href="sms://"+numStr;
