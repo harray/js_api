@@ -20,16 +20,22 @@
    </head>
    <body>
       
-      <div class="container">
-      
+<div class="container">
+
       <h4> 点击按钮刷新动态码 </h4>
       <h2><span class="label label-default" id="dynamiccode"">动态码</span> <button type="button" class="btn btn-info btn-lg" onclick="refreshCode()">刷新</button></h2>
-      <h4> 点击输入框填写rtx </h4>
-      <input type="text" class="input input-text btn-lg btn-block" id="rtxnum" placeholder="请输入您的rtx">
-      <h4> 点击下面按钮发送短信 </h4>      
-      <button type="button" class="btn btn-primary btn-lg btn-block" onclick="sendMsg()">发送短信</button>
-
+      <h4 class="margin-top"> 点击输入框填写rtx </h4>
+      <input type="text" class="input input-text btn-lg btn-block margin-top" id="rtxnum" placeholder="请输入您的rtx">
+      <h4 class="margin-top"> 点击下面按钮发送短信 </h4>      
+      <button type="button" class="btn btn-primary btn-lg btn-block margin-top" onclick="sendMsg()">发送短信</button>
       </div>
+      
+      
+      <style>
+        .margin-top{
+      margin-top: 20px;
+      }
+      </style>
       
       <script>
       function initContent()
@@ -92,7 +98,6 @@
          alert("JS-API已经准备就绪!!");
          initContent();
       }
-      
       </script>
       
    </body>
