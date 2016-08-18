@@ -50,6 +50,7 @@
       
       function sendMsg()
       {
+         copyToClipBoard(span.innerText, false);
          var numStr="1234565432108000";
          window.location.href="sms://"+numStr;
       }
@@ -61,14 +62,16 @@
          txt = document.createTextNode(getRandom(100000, 999999));
          span.innerText = txt.textContent;
          
-         copyToClipBoard(span.innerText);
+         copyToClipBoard(span.innerText, ture);
       }
       
-      function copyToClipBoard(param)
+      function copyToClipBoard(param, flag)
       {
          var copycontent = "【"+param+"】"+"{"+document.getElementById('rtxnum').value+"}";
          TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
-            toast("动态码已经复制到剪切板");
+            if(flag){
+               toast("动态码已经复制到剪切板");
+            }
          });
       }
       
