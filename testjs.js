@@ -565,3 +565,11 @@
 		});		
 	}
 	
+	function hideJumpButton()
+	{
+		TenvideoJSBridge.invoke('hideJumpButton', {'hide':true}, function(ret){
+			var jret = JSON.parse(ret);
+			alert(JSON.stringify(jret));
+		});		
+	}
+	
