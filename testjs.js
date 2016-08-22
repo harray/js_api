@@ -13,7 +13,7 @@
     }
     
     function callbackAfterListener(){
-    	alert("callbackAfterListener");
+    	//alert("callbackAfterListener");
     	callback();
     }
     
