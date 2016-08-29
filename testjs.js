@@ -572,4 +572,21 @@
 			alert(JSON.stringify(jret));
 		});		
 	}
-	
+	function hideSkip(hideFlag){
+		TenvideoJSBridge.invoke('hideJumpButton', {"hide":hideFlag}, function(ret){
+			alert(ret);
+		});
+	}
+	function connectTenvideoJSBridge(callback) {
+	    if (window.TenvideoJSBridge) {
+	        callback(TenvideoJSBridge)
+	    } else {
+	        document.addEventListener('onTenvideoJSBridgeReady', function() {
+	            callback(TenvideoJSBridge)
+	        }, false)
+	    }
+	}
+	connectTenvideoJSBridge(function(bridge) {
+		 // do nothing
+      		hideSkip(true)
+	})
