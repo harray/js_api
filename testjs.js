@@ -574,7 +574,7 @@
 	}
 	function hideSkip(hideFlag){
 		TenvideoJSBridge.invoke('hideJumpButton', {"hide":hideFlag}, function(ret){
-			alert(ret);
+		//	alert(ret);
 		});
 	}
 	function connectTenvideoJSBridge(callback) {
