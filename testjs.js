@@ -590,3 +590,10 @@
 		 // do nothing
       		hideSkip(true)
 	})
+	function shareLocalImage()
+	{
+		TenvideoJSBridge.invoke('shareLocalImage', {'imageUrl':'http://p2.xyzs.com/app/13/32/100001495/3aa251f24edf30c4f10ea143c6af4782_i4.jpg'}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});
+	}
