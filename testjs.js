@@ -45,16 +45,7 @@
         TenvideoJSBridge.on("onShareWeixinTimeline", function(){
       		// alert("onShareWeixinTimeline");
 			//shareInfo("shareWeixinTimeline");
-         });
-         
-         
-	function copyClipBoard(param){
-		var copycontent = param + "://";
-		TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
-			alert(ret);
-		});
-	}
-		
+         });	
         TenvideoJSBridge.on("onShareWeixinUser", function(){
       		// alert("onShareWeixinUser");
 			shareInfo("shareWeixinUser");
@@ -240,8 +231,16 @@
 		});
 	}
 
-	function copyToClipBoard() {
-		TenvideoJSBridge.invoke('copyToClipBoard', {'content':'The copy content'}, function(ret){
+	function copyClipBoard(param){
+		var copycontent = param + "://";
+		TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
+			alert(ret);
+		});
+	}
+	    
+	function copyUA(){
+		var ua = navigator.userAgent;
+		TenvideoJSBridge.invoke('copyToClipBoard', {"content":ua}, function(ret){
 			alert(ret);
 		});
 	}
@@ -375,7 +374,7 @@
 //			alert("微信isInstalled: " + JSON.stringify(jret.result));
 		});
 	}
-	function SetMoreInfo(){
+	function setMoreInfo(){
 		alert("set more info");
 		var params = {"hasRefresh":true, "hasShare":true, "hasFollow":true};
 	//			"shareInfo":"{\"title\":\"abc\", \"subTitle\":\"123456\", \"content\":\"123456\", \"imageUrl\":\"http:\/\/123\", \"imageData\":\"10101010100101\", \"url\":\"http://www.qq.com\", \"coverId\":\"\", \"videoId\":\"\" }", 
