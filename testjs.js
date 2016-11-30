@@ -207,6 +207,7 @@
 		console.log("checkApi");
 		TenvideoJSBridge.invoke('checkApi', {"apiList":["getDeviceInfo","actionLogin","harraytest"]}, function(ret){
 			alert(ret);
+			document.getElementById("apiResult").value = ret;
 			//var jret = JSON.parse(ret);
 			//alert(JSON.stringify(jret.errCode));
 			//alert(ret.errMsg);
