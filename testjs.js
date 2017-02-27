@@ -597,3 +597,16 @@
 			printLog(ret);
 		});
 	}
+	function openPushSwitch(){
+		TenvideoJSBridge.invoke('openPushSwitch', {"enable" : true},function(ret){
+			var jret = JSON.parse(ret);
+			alert("" + JSON.stringify(jret));
+		} );
+	}
+
+	function getPushSwitch(){
+		TenvideoJSBridge.invoke('getPushSwitch', null,function(ret){
+			var jret = JSON.parse(ret);
+			alert("" + JSON.stringify(jret));
+		} );
+	}
