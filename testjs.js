@@ -316,7 +316,10 @@
 		TenvideoJSBridge.invoke('getAppInfo', null, function(ret){
 			alert(ret);
 			var jret = JSON.parse(ret);
-			document.getElementById("apiResult").value = jret;
+			var buildVersion = jret.result.buildVersion;
+			var pkgName = jret.result.pkgName;
+			document.getElementById("buildVersion").value = buildVersion;
+			document.getElementById("pkgName").value = pkgName;
 //			alert(JSON.stringify(jret.result));
 //			alert(JSON.stringify(jret.errCode));
 //			alert(ret.errMsg);
