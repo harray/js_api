@@ -315,11 +315,12 @@
 	function getAppInfo(){
 		TenvideoJSBridge.invoke('getAppInfo', null, function(ret){
 			alert(ret);
-			var jret = JSON.parse(ret);
-			var buildVersion = JSON.stringify(jret.result.buildVersion);
-			var pkgName = JSON.stringify(jret.result.pkgName);
-			document.getElementById("buildVersion").value = buildVersion;
-			document.getElementById("pkgName").value = pkgName;
+			document.getElementById("apiResult").value = ret;						
+//			var jret = JSON.parse(ret);
+//			var buildVersion = JSON.stringify(jret.result.buildVersion);
+//			var pkgName = JSON.stringify(jret.result.pkgName);
+//			document.getElementById("buildVersion").value = buildVersion;
+//			document.getElementById("pkgName").value = pkgName;
 //			alert(JSON.stringify(jret.result));
 //			alert(JSON.stringify(jret.errCode));
 //			alert(ret.errMsg);
