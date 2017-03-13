@@ -316,6 +316,7 @@
 		TenvideoJSBridge.invoke('getAppInfo', null, function(ret){
 			alert(ret);
 			var jret = JSON.parse(ret);
+			document.getElementById("apiResult").value = jret;
 //			alert(JSON.stringify(jret.result));
 //			alert(JSON.stringify(jret.errCode));
 //			alert(ret.errMsg);
