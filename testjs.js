@@ -335,10 +335,11 @@
 		});
 	}
 	function getDeviceInfo(){
-		TenvideoJSBridge.invoke('getDeviceInfo', null, function(ret){
-			var jret = JSON.parse(ret);
+		TenvideoJSBridge.invoke('getDeviceInfo', null, function(ret){			
+//			var jret = JSON.parse(ret);
 //			alert(JSON.stringify(jret.result));
 			alert(ret);
+			document.getElementById("apiResult").value = ret;
 		});
 	}
 	function getMainLoginType(){
