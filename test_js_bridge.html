@@ -1,31 +1,38 @@
 <html>
 <head>
-	<title>harray test js api api api api api api api api</title>
+	<title>test js api</title>
 	<meta http-equiv="Content-Type"  content="text/html;charset=utf8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 	<script language="JavaScript" src="testjs.js"></script>
 	<script type="text/javascript">
 		function openPage() {
-			window.open("secondPage.html");
+			window.open("js_api_demo.html");
 		}
 		function locationPage() {
-			window.location.href="secondPage.html";
+			window.location.href="js_api_demo.html";
 		}
 		function test() {
 			alert("harray test");
 		}
 	</script>
 </head>
-<body>
-<B>harray test jsapi page</B>
+
+<body  bgcolor="#ffffff">
+<h2 style="text-align:center">Test JS-API Page</h2>
 
 <div>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button><br /><br />
+	<button onclick="hideSkip(true)">隐藏跳过按钮</button>
+	<button onclick="hideSkip(false)">显示跳过按钮</button><br /><br />
 	<button onclick="test()">just test</button>
 	<button onclick="jsAlert()">js alert</button><br /><br />
 	<button onclick="download()">download</button>
 	<button onclick="toast()">toast</button>
 	<button onclick="qqVip2WX()">qqVip2WX</button>
-	<br><B>Weixin</B><br>
+	<br><B>Push自测</B><br>
+	<button onclick="getPushSwitch()">获取push开关状态</button>	
+	<button onclick="openPushSwitch()">引导用户打开push通道开关</button>
+        <br><B>Weixin</B><br>
 	<button onclick="launchAppPkgName('weixin')">launchAppPkgName</button>
 	<button onclick="launchAppScheme('weixin')">launchAppScheme</button>
 	<br><B>QQ</B><br>
@@ -37,24 +44,22 @@
 	<br><B>QQ浏览器</B><br>
 	<button onclick="launchAppPkgName('mqqbrowser')">launchAppPkgName</button>
 	<button onclick="launchAppScheme('mqqbrowser')">launchAppScheme</button>
-	<br><B>QQ浏览器</B><br>
-	<button onclick="launchAppPkgName('abc')">launchAppPkgName:abc</button>
-	<button onclick="launchAppSchemeWithParam('weixin')">launchAppSchemeWithParam:weixin</button>
-	<button onclick="launchAppSchemeWithParam('abc')">launchAppSchemeWithParam:abc</button>
-	<br>
+	<br><B>复制cdkey</B><br>
+	<button onclick="copyClipBoard('eckd9sdfs76dsf756')">复制cdkey</button>
+	<br><B>复制UA</B><br>
+	<button onclick="copyUA()">复制UA</button>
+	<br><br>
 	<button onclick="launchTencentVideo()">launchTencentVideo</button>
-	<br>
-	<br>
 	<button onclick="openPage()">open page</button>
-	<button onclick="locationPage()">location page</button>
-	<a href="secondPage.html">href</a>
+    <button onclick="locationPage()">location page</button>
+	<a href="js_api_demo.html">href</a>
 	<button onclick="openUrl('http://harray.qq.com/jsapi/secondPage.html')">openUrl()</button>
 	<br><br>
 	<button onclick="goBack()">goBack</button>
 	<button onclick="aclose()">close</button>
 	<br><br>
     <button onclick="clickToastBtn()">toast</button>
-    <button onclick="SetMoreInfo()">SetMoreInfo</button>
+    <button onclick="setMoreInfo()">setMoreInfo</button>
     <!--<button onclick="jumpInVideo()">jumpInVideo</button>-->
     <button onclick="testCallback()">testCallback</button>
     <button onclick="gotoHomepage()">gotoHomepage</button>
@@ -85,7 +90,6 @@
     <button onclick="getPayVip()">getPayVip</button>
     <button onclick="getTicketNum()">getTicketNum</button><br><br>
     <button onclick="openView('tenvideo2://?action=45&newtenvideo2=1&dataKey=637&title=harray3%e6%b5%8b%e8%af%95&callback=weixin%3A%2F%2F&sender=weixin')">openView游戏底层页</button>
-    
     <br><br>
     
     <button onclick="shareInfo('shareWeixinTimeline')">shareWeiXinTimeline</button>
@@ -107,7 +111,21 @@
 	<!--<input type="file" onchange="onFileChanged(this)"/>-->
     <!--<button onclick="gotoDouban()">gotoDouban</button>-->
     <!--<button onclick="hideH5()">hideH5</button>-->
+    
+    <br><br>
+    
+    <button onclick="switchLogin('qq')">切换帐号QQ</button>
+    <button onclick="switchLogin('wx')">切换帐号WX</button>
 
+    <br><br>
+    
+    <button onclick="showMessageBtn()">显示站内信</button>
+    <button onclick="hideMessageBtn()">隐藏站内信</button>
+    <button onclick="jumpWXBizProfile()">微信公众号</button>
+    <button onclick="genTansPropertyTK()">钻石转移TK</button>
+    <button onclick="hideJumpButton()">隐藏跳过按钮</button>
+    <button onclick="shareLocalImage()">分享本地图片到QQ/微信</button>
+    <input type="text" id="apiResult" name="apiResult" value=""/>
 </div>
 <div>
 

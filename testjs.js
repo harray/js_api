@@ -2,18 +2,23 @@
  * 
  */
 
- if(typeof TenvideoJSBridge == "object"){
+    if(typeof TenvideoJSBridge == "object"){
 	        callback();
-	    } else {
+    } else {
 	        if(document.addEventListener){
-	            document.addEventListener("onTenvideoJSBridgeReady", callback, false);
+	            document.addEventListener("onTenvideoJSBridgeReady", callbackAfterListener, false);
 	        } else if(document.attachEvent){
-	            document.attachEvent("onTenvideoJSBridgeReady", callback);
+	            document.attachEvent("onTenvideoJSBridgeReady", callbackAfterListener);
 	        }
-	    }
-
+    }
+    
+    function callbackAfterListener(){
+    	//alert("callbackAfterListener");
+    	callback();
+    }
+    
     function callback(){
- 	    console.log(window.TenvideoJSBridge);
+ 	console.log(window.TenvideoJSBridge);
         TenvideoJSBridge.invoke("newToast", {"content":"jsapi is ok!"});
         TenvideoJSBridge.on("openvideo", function(){
             TenvideoJSBridge.toast("openvideo");
@@ -40,7 +45,7 @@
         TenvideoJSBridge.on("onShareWeixinTimeline", function(){
       		// alert("onShareWeixinTimeline");
 			//shareInfo("shareWeixinTimeline");
-         });
+         });	
         TenvideoJSBridge.on("onShareWeixinUser", function(){
       		// alert("onShareWeixinUser");
 			shareInfo("shareWeixinUser");
@@ -183,7 +188,7 @@
 		});
 	}
 	function gotoHomepage(){
-		TenvideoJSBridge.invoke("actionJump", {"url":"txvideo://v.qq.com/HomeActivity?tabIndex=0"});
+		TenvideoJSBridge.invoke("openView", {"url":"txvideo://v.qq.com/HomeActivity?tabIndex=0&channelId=100191&channelTitle=%e4%b8%ba%e4%bd%a0%e6%8e%a8%e8%8d%90","close":"1"});
 	}
 
 	var isRain = false;
@@ -202,6 +207,7 @@
 		console.log("checkApi");
 		TenvideoJSBridge.invoke('checkApi', {"apiList":["getDeviceInfo","actionLogin","harraytest"]}, function(ret){
 			alert(ret);
+			document.getElementById("apiResult").value = ret;
 			//var jret = JSON.parse(ret);
 			//alert(JSON.stringify(jret.errCode));
 			//alert(ret.errMsg);
@@ -226,8 +232,16 @@
 		});
 	}
 
-	function copyToClipBoard() {
-		TenvideoJSBridge.invoke('copyToClipBoard', {'content':'The copy content'}, function(ret){
+	function copyClipBoard(param){
+		var copycontent = param + "://";
+		TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
+			alert(ret);
+		});
+	}
+	    
+	function copyUA(){
+		var ua = navigator.userAgent;
+		TenvideoJSBridge.invoke('copyToClipBoard', {"content":ua}, function(ret){
 			alert(ret);
 		});
 	}
@@ -301,7 +315,12 @@
 	function getAppInfo(){
 		TenvideoJSBridge.invoke('getAppInfo', null, function(ret){
 			alert(ret);
-			var jret = JSON.parse(ret);
+			document.getElementById("apiResult").value = ret;						
+//			var jret = JSON.parse(ret);
+//			var buildVersion = JSON.stringify(jret.result.buildVersion);
+//			var pkgName = JSON.stringify(jret.result.pkgName);
+//			document.getElementById("buildVersion").value = buildVersion;
+//			document.getElementById("pkgName").value = pkgName;
 //			alert(JSON.stringify(jret.result));
 //			alert(JSON.stringify(jret.errCode));
 //			alert(ret.errMsg);
@@ -316,10 +335,11 @@
 		});
 	}
 	function getDeviceInfo(){
-		TenvideoJSBridge.invoke('getDeviceInfo', null, function(ret){
-			var jret = JSON.parse(ret);
+		TenvideoJSBridge.invoke('getDeviceInfo', null, function(ret){			
+//			var jret = JSON.parse(ret);
 //			alert(JSON.stringify(jret.result));
 			alert(ret);
+			document.getElementById("apiResult").value = ret;
 		});
 	}
 	function getMainLoginType(){
@@ -361,7 +381,7 @@
 //			alert("微信isInstalled: " + JSON.stringify(jret.result));
 		});
 	}
-	function SetMoreInfo(){
+	function setMoreInfo(){
 		alert("set more info");
 		var params = {"hasRefresh":true, "hasShare":true, "hasFollow":true};
 	//			"shareInfo":"{\"title\":\"abc\", \"subTitle\":\"123456\", \"content\":\"123456\", \"imageUrl\":\"http:\/\/123\", \"imageData\":\"10101010100101\", \"url\":\"http://www.qq.com\", \"coverId\":\"\", \"videoId\":\"\" }", 
@@ -506,5 +526,93 @@
 	}
 	
 	function jsAlert() {
-		alert("in js file");
+		alert(TenvideoJSBridge);
+            
+		
+	}
+	
+	function switchLogin(type)
+	{
+		TenvideoJSBridge.invoke('switchLoginState', {'userType':type}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});
+	}
+	
+	function showMessageBtn()
+	{
+		TenvideoJSBridge.invoke('showMessageButton', {'unReadNum':3, 'url':'http://www.qq.com', 'show':1}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});		
+	}
+		
+	function hideMessageBtn()
+	{
+		TenvideoJSBridge.invoke('showMessageButton', {'unReadNum':3, 'url':'http://www.qq.com', 'show':0}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});		
+	}
+	
+	function jumpWXBizProfile()
+	{
+		TenvideoJSBridge.invoke('jumpWXBizProfile', {'profileId':'cll_qq', 'extMsg':'user'}, function(ret){
+			var jret = JSON.parse(ret);
+			alert(JSON.stringify(jret));
+		});		
+	}
+	
+	function genTansPropertyTK()
+	{
+		TenvideoJSBridge.invoke('genTansPropertyTK', null, function(ret){
+			var jret = JSON.parse(ret);
+			alert(JSON.stringify(jret));
+		});		
+	}
+	
+	function hideJumpButton()
+	{
+		TenvideoJSBridge.invoke('hideJumpButton', {'hide':true}, function(ret){
+			var jret = JSON.parse(ret);
+			alert(JSON.stringify(jret));
+		});		
+	}
+	function hideSkip(hideFlag){
+		TenvideoJSBridge.invoke('hideJumpButton', {"hide":hideFlag}, function(ret){
+		//	alert(ret);
+		});
+	}
+	function connectTenvideoJSBridge(callback) {
+	    if (window.TenvideoJSBridge) {
+	        callback(TenvideoJSBridge)
+	    } else {
+	        document.addEventListener('onTenvideoJSBridgeReady', function() {
+	            callback(TenvideoJSBridge)
+	        }, false)
+	    }
+	}
+	connectTenvideoJSBridge(function(bridge) {
+		 // do nothing
+      		hideSkip(true)
+	})
+	function shareLocalImage()
+	{
+		TenvideoJSBridge.invoke('shareLocalImage', {'imageUrl':'http://p2.xyzs.com/app/13/32/100001495/3aa251f24edf30c4f10ea143c6af4782_i4.jpg'}, function(ret){
+			var jret = JSON.parse(ret);
+			printLog(ret);
+		});
+	}
+	function openPushSwitch(){
+		TenvideoJSBridge.invoke('openPushSwitch', {"enable" : true},function(ret){
+			var jret = JSON.parse(ret);
+			alert("" + JSON.stringify(jret));
+		} );
+	}
+
+	function getPushSwitch(){
+		TenvideoJSBridge.invoke('getPushSwitch', null,function(ret){
+			var jret = JSON.parse(ret);
+			alert("" + JSON.stringify(jret));
+		} );
 	}

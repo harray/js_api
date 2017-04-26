@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>腾讯视频JS-API</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+      
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+      <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+      
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      
+   </head>
+   <body>
+      
+      <div class="container">
+
+      <h2 class="text-center margin-top margin-buttom">8000短信呼叫</h2>
+      <h4 class="margin-top"> 点击按钮刷新动态码 </h4>
+      <h2><span class="label label-default" id="dynamiccode"">动态码</span> <button type="button" class="btn btn-info btn-lg" onclick="refreshCode()">刷新</button></h2>
+      <h4 class="margin-top"> 点击输入框填写rtx </h4>
+      <input type="text" class="input input-text btn-lg btn-block margin-top" id="rtxnum" placeholder="请输入您的rtx">
+      <h4 class="margin-top"> 点击下面按钮发送短信 </h4>      
+      <button type="button" class="btn btn-primary btn-lg btn-block margin-top" onclick="sendMsg()">发送短信</button>
+      
+      </div>
+      
+      
+      <style>
+        .margin-top{
+      margin-top: 20px;
+      }
+        .margin-buttom{
+      margin-buttom: 20px;
+      }
+      </style>
+      
+      <script>
+      function initContent()
+      {
+         document.title="腾讯视频JS-API";
+         refreshCode();
+      }
+      
+      function sendMsg()
+      {
+         span = document.getElementById('dynamiccode');
+         copyToClipBoard(span.innerText, false);
+         var numStr="1234565432108000";
+         window.location.href="sms://"+numStr;
+      }
+      
+      function refreshCode()
+      {
+         //alert(document.getElementById('dynamiccode').innerHTML);
+         span = document.getElementById('dynamiccode');
+         txt = document.createTextNode(getRandom(100000, 999999));
+         span.innerText = txt.textContent;
+         
+         copyToClipBoard(span.innerText, true);
+      }
+      
+      function copyToClipBoard(param, flag)
+      {
+         var copycontent = "【"+param+"】"+"【"+document.getElementById('rtxnum').value+"】";
+         TenvideoJSBridge.invoke('copyToClipBoard', {"content":copycontent}, function(ret){
+            if(flag){
+               toast("动态码已经复制到剪切板");
+            }
+         });
+      }
+      
+      function toast(param)
+      {
+         TenvideoJSBridge.invoke('toast', {"content":param}, function(ret){
+            // do nothing
+         });
+      }
+      
+      function getRandom(min, max) 
+      {
+         return Math.floor(Math.random() * (max - min)) + min;
+      }
+      
+      if(typeof TenvideoJSBridge == "object")
+      {
+            initContent();
+      } 
+      else 
+      {
+         if(document.addEventListener){
+            document.addEventListener("onTenvideoJSBridgeReady", callbackAfterListener, false);
+         } else if(document.attachEvent){
+            document.attachEvent("onTenvideoJSBridgeReady", callbackAfterListener);
+         }
+      }
+    
+      function callbackAfterListener()
+      {
+         alert("JS-API已经准备就绪!!");
+         initContent();
+      }
+      </script>
+      
+   </body>
+   
+</html>
