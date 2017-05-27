@@ -375,6 +375,7 @@
 		TenvideoJSBridge.invoke('isInstalled', {"scheme":"weixin://"}, function(ret){
 			var jret = JSON.parse(ret);
 			alert("微信isInstalled: " + JSON.stringify(jret.result));
+			document.getElementById("apiResult").value = jret.result;
 		});
 	}
 	function openView(url){
