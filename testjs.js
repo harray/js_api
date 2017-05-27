@@ -296,7 +296,8 @@
 	function getCookie(type){
 		TenvideoJSBridge.invoke('getCookie', {'type':type}, function(ret){
 			alert(ret);
-			var jret = JSON.parse(ret);
+			document.getElementById("apiResult").value = ret;
+//			var jret = JSON.parse(ret);
 //			alert(JSON.stringify("errCode:" + jret.errCode));
 		});
 	}
@@ -304,7 +305,8 @@
 	function getMainCookie(type){
 		TenvideoJSBridge.invoke('getMainCookie', null, function(ret){
 			alert(ret);
-			var jret = JSON.parse(ret);
+			document.getElementById("apiResult").value = ret;
+//			var jret = JSON.parse(ret);
 //			alert(JSON.stringify(jret.result));
 		});
 	}
