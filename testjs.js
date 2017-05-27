@@ -373,9 +373,11 @@
 	}
 	function isAppInstalled1(){
 		TenvideoJSBridge.invoke('isInstalled', {"scheme":"weixin://"}, function(ret){
-			var jret = JSON.parse(ret);
-			alert("微信isInstalled: " + JSON.stringify(jret.result));
-			document.getElementById("apiResult").value = jret.result;
+			alert(ret);
+			document.getElementById("apiResult").value = ret;
+//			var jret = JSON.parse(ret);
+//			alert("微信isInstalled: " + JSON.stringify(jret.result));
+//			document.getElementById("apiResult").value = JSON.stringify(jret.result);
 		});
 	}
 	function openView(url){
