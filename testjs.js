@@ -368,7 +368,9 @@
 	function isAppInstalled(){
 		TenvideoJSBridge.invoke('isInstalled', {"pkgName":"weixin"}, function(ret){
 			alert(ret);
-			document.getElementById("apiResult").value = ret;	
+			document.getElementById("apiResult").value = ret;
+	//		alert(ret);
+	//		document.getElementById("apiResult").value = ret;	
 	//		var jret = JSON.parse(ret);
 	//		alert("微信isInstalled: " + JSON.stringify(jret.result));
 		});
