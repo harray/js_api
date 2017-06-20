@@ -397,8 +397,10 @@
 	//			"shareInfo":"{\"title\":\"abc\", \"subTitle\":\"123456\", \"content\":\"123456\", \"imageUrl\":\"http:\/\/123\", \"imageData\":\"10101010100101\", \"url\":\"http://www.qq.com\", \"coverId\":\"\", \"videoId\":\"\" }", 
 	//				"followInfo":"{\"videoType\":\"1\", \"title\":\"123456\", \"imageUrl\":\"http://123\", \"columnId":\"100000", \"coverId\":\"\", \"videoId\":\"\", \"programId\":\"200000\", \"dataKey\":\"\"}"} ;
 		TenvideoJSBridge.invoke('setMoreInfo', params, function(ret){
-			var jret = JSON.parse(ret);
-			alert(JSON.stringify(jret.errCode));
+			alert(ret);
+			document.getElementById("apiResult").value = ret;	
+	//		var jret = JSON.parse(ret);
+	//		alert(JSON.stringify(jret.errCode));
 		});
 	}
 	function launchAppPkgName(PkgName){
