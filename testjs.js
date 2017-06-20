@@ -556,8 +556,10 @@
 	function showMessageBtn()
 	{
 		TenvideoJSBridge.invoke('showMessageButton', {'unReadNum':3, 'url':'http://www.qq.com', 'show':1}, function(ret){
-			var jret = JSON.parse(ret);
-			printLog(ret);
+			alert(ret);
+			document.getElementById("apiResult").value = ret;			
+			//var jret = JSON.parse(ret);
+			//printLog(ret);
 		});		
 	}
 		
