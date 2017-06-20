@@ -223,6 +223,7 @@
 	function getLocation() {
 		TenvideoJSBridge.invoke('getLocation', null, function(ret){
 			alert(ret);
+			document.getElementById("apiResult").value = ret;
 		});
 	}
 	
