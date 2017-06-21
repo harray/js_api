@@ -270,7 +270,9 @@
 	function getMainLogin() {
 		TenvideoJSBridge.invoke('getMainLogin', null, function(ret){
 			alert(ret);
-			var jret = JSON.parse(ret);
+			document.getElementById("apiResult").value = ret;
+//			alert(ret);
+//			var jret = JSON.parse(ret);
 //			alert(JSON.stringify(jret.result));
 		});
 	}
