@@ -472,6 +472,7 @@
 			console.log(ret); 
 			var jret = JSON.parse(ret);
 //			alert("getTicketNum: " + JSON.stringify(jret.result));
+			document.getElementById("apiResult").value = ret;
 			alert(ret);
 		});
 	}
