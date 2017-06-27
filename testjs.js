@@ -432,7 +432,24 @@
 			alert(ret);
 		});
 	}
+
+	function shareFromH5(){
+		TenvideoJSBridge.invoke('shareFromH5',{"title": "harray 胡咧咧标题", "content":"内容", "imageUrl":"", "url":"https://movie.douban.com/subject/5154799?a=1", "cid":"m5eim4jo5m5aybg", "vid":"x0016hskj53", "payType":""}, function(ret){
+			alert(ret);
+		});
+	}
 	
+	function shareTo(){
+		TenvideoJSBridge.invoke('shareTo',{"webShareTitle": "harray 胡咧咧标题", "webShareSubTitle":"webShareSubTitle", "webShareImageURL":"", "webShareURL":"https://movie.douban.com/subject/5154799?a=1"}, function(ret){
+			alert(ret);
+		});
+	}
+		
+	function showAppPage(){
+		TenvideoJSBridge.invoke('showAppPage',{"mod": 1, "args": {"pt": "","idType" : 1,"starId":  216484,"starName": "harrayhu", "starFaceImg": ""}}, function(ret){
+			alert(ret);
+		});
+	}
 	function qqVip2WX() {
 		TenvideoJSBridge.invoke('qqVip2WX', nil, function(ret){
 			alert(ret);
