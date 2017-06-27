@@ -475,6 +475,12 @@
 		});
 	}
 
+	function hasTapBackground(){
+		TenvideoJSBridge.invoke('hasTapBackground',null, function(ret){
+			alert(ret);
+		});
+	}
+
 	function showAppPage(){
 		TenvideoJSBridge.invoke('showAppPage',{"mod": 1, "args": {"pt": "","idType" : 1,"starId":  216484,"starName": "harrayhu", "starFaceImg": ""}}, function(ret){
 			alert(ret);
