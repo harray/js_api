@@ -444,7 +444,37 @@
 			alert(ret);
 		});
 	}
-		
+	
+	function getVideoInfo(){
+		TenvideoJSBridge.invoke('getVideoInfo',null, function(ret){
+			alert(ret);
+		});
+	}
+	
+	function sendMessage(){
+		TenvideoJSBridge.invoke('sendMessage',{'type': '123', 'data': {'test':'hehe'} }, function(ret){
+			alert(ret);
+		});
+	}
+
+	function showLayout(){
+		TenvideoJSBridge.invoke('showLayout',{'url': 'http://m.v.qq.com/'}, function(ret){
+			alert(ret);
+		});
+	}
+
+	function closeLayout(){
+		TenvideoJSBridge.invoke('closeLayout',null, function(ret){
+			alert(ret);
+		});
+	}
+
+	function openStarRank(){
+		TenvideoJSBridge.invoke('openStarRank',null, function(ret){
+			alert(ret);
+		});
+	}
+
 	function showAppPage(){
 		TenvideoJSBridge.invoke('showAppPage',{"mod": 1, "args": {"pt": "","idType" : 1,"starId":  216484,"starName": "harrayhu", "starFaceImg": ""}}, function(ret){
 			alert(ret);
