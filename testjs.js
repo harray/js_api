@@ -81,6 +81,9 @@
          TenvideoJSBridge.on("onActionFollow", function(ret){
 // 			alert("onActionFollow: " + ret);
           });
+	  TenvideoJSBridge.on("onMessage", function(ret){
+			alert("onMessage: " + ret);
+          });
          TenvideoJSBridge.on("onActionFollowFinish", function(ret){
 //  			alert("onActionFollowFinish: " + ret);
   			var jret = JSON.parse(ret);
