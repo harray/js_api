@@ -15,12 +15,17 @@
 		//location.href = "tenvideo2://?action=11&program_id=" + pid + "&program_type=0";
 		location.href = "txvideo://v.qq.com/TencentLiveActivity?pid=" + pid + "&style=1&streamStyle=1";
 	}
+	function gotoStarId() {
+		var starid = document.getElementById("starid").value;
+		location.href = "txvideo://v.qq.com/FanCircleActivity?starid=" + starid + "";
+	}
 	</script>
 </head>
 <body>
 <br><br>
-<input type="text" id="pid"/><button onclick="gotoPid()">进入直播底层页</button>
-<input type="text" id="whymepid"/><button onclick="gotoWheMePid()">进入Why Me底层页</button>
+<input type="text" id="pid"/><button onclick="gotoPid()">进入直播底层页</button><br>
+<input type="text" id="whymepid"/><button onclick="gotoWheMePid()">进入Why Me底层页</button><br>
+<input type="text" id="starid"/><button onclick="gotoStarId()">进入明星饭团</button><br>
 <br><br>
 <a href="http://a.b.com/universalLink.html">universal link页面</a><br><br>
 <a href="http://m.v.qq.com/universalLink.html">同域名的universal link页面</a><br><br>
