@@ -61,12 +61,16 @@
         TenvideoJSBridge.on("onFollow", function(){
       		// alert("onFollow");
          });
+	TenvideoJSBridge.on("onShareIconClick", function(ret){
+                        var jret = JSON.parse(ret);
+			alert("onShareFinish " + JSON.stringify(jret.result));
+         });
          TenvideoJSBridge.on("onShareFinish", function(ret){
-            var jret = JSON.parse(ret);
+                        var jret = JSON.parse(ret);
 			// alert("onShareFinish " + JSON.stringify(jret.result));
          });
          TenvideoJSBridge.on("onShareWeixinTimelineFinish", function(){
-       		// alert("onShareWeixinTimelineFinish");
+       		        // alert("onShareWeixinTimelineFinish");
  			//shareInfo("shareWeixinTimeline");
           });
          TenvideoJSBridge.on("onActionLoginFinish", function(ret){
@@ -79,13 +83,13 @@
  			// alert("onActionLogin: " + ret);
           });
          TenvideoJSBridge.on("onActionFollow", function(ret){
-// 			alert("onActionFollow: " + ret);
+ 			// alert("onActionFollow: " + ret);
           });
 	  TenvideoJSBridge.on("onComment", function(ret){
 			alert("onComment: " + ret);
           });
          TenvideoJSBridge.on("onActionFollowFinish", function(ret){
-//  			alert("onActionFollowFinish: " + ret);
+  			// alert("onActionFollowFinish: " + ret);
   			var jret = JSON.parse(ret);
 			// alert("harray ActionFollowFinish: " + JSON.stringify(jret.errCode));
            });
