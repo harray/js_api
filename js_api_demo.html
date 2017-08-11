@@ -57,7 +57,7 @@
          //window.location.href="sms://"+numStr;
          
          var smsUrl = "sms://"+numStr;
-         TenvideoJSBridge.invoke('toast', {"pkgName":"com.tencent.mm", "pkgUrl":smsUrl, "appName":"微信"}, function(ret){
+         TenvideoJSBridge.invoke('launch3rdApp', {"pkgName":"com.tencent.mm", "pkgUrl":smsUrl, "appName":"短信"}, function(ret){
             // do nothing
          });
       }
