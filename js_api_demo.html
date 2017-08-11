@@ -54,7 +54,12 @@
          span = document.getElementById('dynamiccode');
          copyToClipBoard(span.innerText, false);
          var numStr="1234565432108000";
-         window.location.href="sms://"+numStr;
+         //window.location.href="sms://"+numStr;
+         
+         var smsUrl = "sms://"+numStr;
+         TenvideoJSBridge.invoke('toast', {"pkgName":"com.tencent.mm", "pkgUrl":smsUrl, "appName":"微信"}, function(ret){
+            // do nothing
+         });
       }
       
       function refreshCode()
