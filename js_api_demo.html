@@ -53,10 +53,10 @@
       {
          span = document.getElementById('dynamiccode');
          copyToClipBoard(span.innerText, false);
-         var numStr="1234565432108000";
-         //window.location.href="sms://"+numStr;
-         
+         var numStr="8000";
+        
          var smsUrl = "sms://"+numStr;
+         //window.location.href=smsUrl;
          TenvideoJSBridge.invoke('launch3rdApp', {"pkgName":"com.tencent.mm", "pkgUrl":smsUrl, "appName":"短信"}, function(ret){
             // do nothing
          });
