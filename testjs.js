@@ -385,6 +385,15 @@
 	//		alert("微信isInstalled: " + JSON.stringify(jret.result));
 		});
 	}
+	function getInstallUserState(){
+		TenvideoJSBridge.invoke('getInstallUserState', {"new_user_valide_duration":1}, function(ret){
+			alert(ret);
+			document.getElementById("apiResult").value = ret;
+//			var jret = JSON.parse(ret);
+//			alert("微信isInstalled: " + JSON.stringify(jret.result));
+//			document.getElementById("apiResult").value = JSON.stringify(jret.result);
+		});
+	}
 	function isAppInstalled1(){
 		TenvideoJSBridge.invoke('isInstalled', {"scheme":"weixin://"}, function(ret){
 			alert(ret);
