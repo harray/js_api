@@ -394,6 +394,43 @@
 //			document.getElementById("apiResult").value = JSON.stringify(jret.result);
 		});
 	}
+	function getInstallUserStateHarray(){
+		var text1;
+		var text2;
+		TenvideoJSBridge.invoke('getDeviceInfo', null, function(ret){
+			var jret = JSON.parse(ret);
+			var result = JSON.stringify(jret.result);
+			var omgId = JSON.parse(result).omgid;
+			alert(omgId);
+			var y1 = omgId.charAt(41);
+			var y2 = omgId.charAt(42);
+			var m = omgId.charAt(43);
+			var d1 = omgId.charAt(44);
+			var d2 = omgId.charAt(45);
+			var y = y1+y2;
+			var d = d1+d2;
+			var truey = parseInt(y, 16) + 1999;
+			var truem = parseInt(m, 16) + 1;
+			var trued = parseInt(d, 16);
+			var myDate = new Date();
+			var month = myDate.getMonth()+1
+			text1  = '安装时间为：'+truey+'年'+truem+'月'+trued+'日，\n当前时间为：'+myDate.getFullYear()+'年'+month+'月'+myDate.getDate()+'日';
+			//alert(truey);
+			//alert(truem);
+			//alert(trued);
+			alert(text1);
+			
+		});
+		var durationday = document.getElementById("duration").value;
+		TenvideoJSBridge.invoke('getInstallUserState', {"new_user_valide_duration": durationday}, function(ret){
+			var jret = JSON.parse(ret);
+			var result = JSON.stringify(jret.result);
+			var userType = JSON.parse(result).userType;
+			text2 = 'userType:' + userType;
+			alert(text2);
+		});
+		
+	}
 	function isAppInstalled1(){
 		TenvideoJSBridge.invoke('isInstalled', {"scheme":"weixin://"}, function(ret){
 			alert(ret);
