@@ -1,11 +1,11 @@
 <html>
 <head>
-	<title>test js api</title>
+	<title>JsApi Test</title>
 	<meta http-equiv="Content-Type"  content="text/html;charset=utf8">
 	<!--
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"> 
         -->
-	<script language="JavaScript" src="testjs.js"></script>
+	<script language="JavaScript" src="testjs_test.js"></script>
 	<script type="text/javascript">
 		function openPage() {
 			window.open("js_api_demo.html");
@@ -20,142 +20,222 @@
 </head>
 
 <body  bgcolor="#ffffff">
-<h2 style="text-align:center">Test JS-API Page</h2>
-
+<h2 style="text-align:center;font-size:60px;">Test JS-API Page</h2>
 <div>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
-	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button><br /><br />
-	<button onclick="hideSkip(true)">隐藏跳过按钮</button>
-	<button onclick="hideSkip(false)">显示跳过按钮</button><br /><br />
-	<button onclick="test()">just test</button>
-	<button onclick="jsAlert()">js alert</button><br /><br />
-	<button onclick="download()">download</button>
-	<button onclick="toast()">toast</button>
-	<button onclick="qqVip2WX()">qqVip2WX</button>
-	<input type="text" id="apiResult" aria-label="apiResult" value=""/>
-	<br><B>Push自测</B><br>
-	<button onclick="getPushSwitch()">获取push开关状态</button>	
-	<button onclick="openPushSwitch()">引导用户打开push通道开关</button>
-        <br><B>Weixin</B><br>
-	<button onclick="launchAppPkgName('weixin')">launchAppPkgName</button>
-	<button onclick="launchAppScheme('weixin')">launchAppScheme</button>
-	<br><B>QQ</B><br>
-	<button onclick="launchAppPkgName('mqqapi')">launchAppPkgName</button>
-	<button onclick="launchAppScheme('mqqapi')">launchAppScheme</button>
-	<br><B>腾讯新闻</B><br>
-	<button onclick="launchAppPkgName('qqnews')">launchAppPkgName</button>
-	<button onclick="launchAppScheme('qqnews')">launchAppScheme</button>
-	<br><B>QQ浏览器</B><br>
-	<button onclick="launchAppPkgName('mqqbrowser')">launchAppPkgName</button>
-	<button onclick="launchAppScheme('mqqbrowser')">launchAppScheme</button>
-	<br><B>复制cdkey</B><br>
-	<button onclick="copyClipBoard('eckd9sdfs76dsf756')">复制cdkey</button>
-	<br><B>复制UA</B><br>
-	<button onclick="copyUA()">复制UA</button>
-	<br><br>
-	<button onclick="launchTencentVideo()">launchTencentVideo</button>
-	<button onclick="openPage()">open page</button>
-    <button onclick="locationPage()">location page</button>
-	<a href="js_api_demo.html">href</a>
-	<button onclick="openUrl('http://harray.qq.com/jsapi/js_api_demo.html')">openUrl()</button>
-	<br><br>
-	<button onclick="goBack()">goBack</button>
-	<button onclick="aclose()">close</button>
-	<br><br>
-    <button onclick="setMoreInfo()">setMoreInfo</button>
-    <!--<button onclick="jumpInVideo()">jumpInVideo</button>-->
-    <button onclick="testCallback()">testCallback</button>
-    <button onclick="gotoHomepage()">gotoHomepage</button>
-    <!--<button id="btn_rain" onclick="showBackground()">rain</button>-->
-    <button onclick="checkApi()">checkApi</button><br><br>
-    <B>Login</B><br>
-    <button onclick="login('qq')">loginQQ</button>
-    <button onclick="login('wx')">loginWX</button>
-    <button onclick="login('tv')">loginTV</button>
-    <button onclick="getMainLogin()">getMainLogin</button><br><br>
-    <B>Check Login</B><br>
-    <button onclick="getUserInfo(['qq','wx', 'tv'])">getUserInfo(['qq','wx', 'tv'])</button>
-    <button onclick="getMainCookie()">getMainCookie</button>
-    <!--<button onclick="actionPlay({'vid':'b0016r7wjxj'})">actionPlay</button>-->
-    <button onclick="getAppInfo()">getAppInfo</button>
-    <button onclick="getDeviceInfo()">getDeviceInfo</button><br><br>
-    <button onclick="getMainLoginType()">getMainLoginType</button>
-    <button onclick="getMainUserInfo()">getMainUserInfo</button>
-    <button onclick="isAppInstalled()">isWeiXinInstalled</button>
-    <button onclick="isAppInstalled1()">isWeiXinInstalled1</button>
-    <button onclick="launchApp()">launchApp</button>
-    <button onclick="getInstallUserState()">getInstallUserState</button><br><br>
-    <input type="text" id="duration"/><button onclick="getInstallUserStateHarray()">检查间隔时间，是否新用户</button><br>
-    <button onclick="cacheVideo()">cacheVideo</button><br><br>
-    <button onclick="getNetworkState()">getNetworkState</button>
-    <button onclick="getLocation()">getLocation</button>
-    <button onclick="downloadFile()">downloadFile</button><br><br>
-    <button onclick="getPayVip()">getPayVip</button>
-    <button onclick="getTicketNum()">getTicketNum</button><br><br>
-    <button onclick="openView('tenvideo2://?action=19')">openView明星主题首页</button>
-    <br><br>
-    
-    <button onclick="shareInfo('shareWeixinTimeline')">shareWeiXinTimeline</button>
-    <button onclick="shareInfo('shareWeixinUser')">shareWeiXinUser</button>
-    <button onclick="shareInfo('shareQQUser')">shareQQUser</button><br><br>
-    <button onclick="shareInfo('shareQzone')">shareQzone</button>
-    <button onclick="shareInfo('shareTxWeibo')">shareTxWeibo</button>
-    <button onclick="shareInfo('shareSinaWeibo')">shareSinaWeibo</button><br><br>
-    <button onclick="actionFollow('lid')">栏目关注</button>
-    <button onclick="actionFollow('cid')">专辑关注</button>
-    <button onclick="actionFollow('vid')">单视频关注</button><br><br>
-    <button onclick="actionFollow('gamepid')">游戏直播关注</button>
-    <button onclick="actionFollow('sportpid')">体育直播关注</button>
-    <button onclick="actionFollow('newpid')">新直播关注</button><br><br>
-    <input type="file" id="file"/>
-    <input type="button" value="读取二进制" onclick="readAsbinaryString()"/>
-	<!--<input type="file" onchange="onFileChanged(this)"/>-->
-    <!--<button onclick="gotoDouban()">gotoDouban</button>-->
-    <!--<button onclick="hideH5()">hideH5</button>-->
-    
-    <br><br>
-    
-    <button onclick="switchLogin('qq')">切换帐号QQ</button>
-    <button onclick="switchLogin('wx')">切换帐号WX</button>
+	<br><B style="font-size:40px;">一，基础功能</B><br>
+	<br><B style="color:Red">1，查询接口：判断当前客户版本是否支持指定JS接口(600需求)</B><br>
+        <button style="width:200px;height:50px;font-size:20px;" onclick="checkApi()">checkApi</button><br /><br />
 
-    <br><br>
-	 
-    	<button onclick="shareFromH5()">shareFromH5</button>
-	<button onclick="shareTo()">shareTo</button>
-	<button onclick="showAppPage()">showAppPage</button>
-	<button onclick="openToolsDialog()">openToolsDialog</button><br><br>
-	<button onclick="getCookie(['qq','wx','tv'])">getCookie</button><br><br>
-	<button onclick="getVideoInfo()">getVideoInfo</button>
-	<button onclick="sendMessage()">sendMessage</button>
-	<button onclick="showLayout()">showLayout</button>
-	<button onclick="closeLayout()">closeLayout</button>
-	<button onclick="openStarRank()">openStarRank</button>
-	<button onclick="showH5()">showH5</button>
-	<button onclick="hideH5()">hideH5</button>
-	<button onclick="hasTapBackground()">hasTapBackground</button>
-    <br><br>
-    
-    <button onclick="showMessageBtn()">显示站内信</button>
-    <button onclick="hideMessageBtn()">隐藏站内信</button>
-    <button onclick="jumpWXBizProfile()">微信公众号</button>
-    <button onclick="genTansPropertyTK()">钻石转移TK</button>
-    <button onclick="hideJumpButton()">隐藏跳过按钮</button>
-    <button onclick="shareLocalImage()">分享本地图片到QQ/微信</button>
-    <!--<input type="text" id="apiResult" name="apiResult" value=""/>-->
-</div>
-<div>
+	<br><B style="color:Red">2，App信息：获取App相关信息(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="getAppInfo()">getAppInfo</button><br /><br />
 
+	<br><B style="color:Red">3，设备信息：获取设备信息(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="getDeviceInfo()">getDeviceInfo</button><br /><br />
+
+	<br><B style="color:Red">4，More菜单：设置More菜单(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="setMoreInfo()">setMoreInfo</button><br /><br />
+
+    	<br><B>5，关注：视频关注操作(待补充)</B><br>
+
+    	<br><B style="color:Red">6，登录／登出－发起登录操作：目前“qq”，“wx”，“tv”三种(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="actionLogin('qq')">actionLogin('qq')</button>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="actionLogin('wx')">actionLogin('wx')</button>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="actionLogin('tv')">actionLogin('tv')</button><br /><br />
+
+    	<br><B style="color:Red">7，登录／登出－当前主登录状态：目前“qq”，“wx”，“未登录”三种(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="getMainLoginType()">getMainLoginType</button><br /><br />
+
+   	<br><B>8，登录／登出－切换账号</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="switchLogin('qq')">切换帐号QQ</button>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="switchLogin('wx')">切换帐号WX</button><br /><br />
+	
+    	<br><B style="color:Red">9，用户信息－获得当前用户不同类型账号的用户信息：目前“qq”，“wx”，“tv”三种(600需求)</B><br>
+    	<button style="width:300px;height:50px;font-size:20px;" onclick="getUserInfo(['qq','wx', 'tv'])">getUserInfo(['qq','wx', 'tv'])</button><br /><br />
+     
+    	<br><B style="color:Red">10，用户信息－获得当前主登录账号的用户信息：目前“qq”，“wx”，“未登录”三种(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="getMainUserInfo()">getMainUserInfo</button><br /><br />
+    
+    	<br><B style="color:Red">11，Cookie－获得当前用户不同类型账号的cookie：目前“qq”，“wx”，“tv”三种(600需求)</B><br>
+    	<button style="width:300px;height:50px;font-size:20px;" onclick="getCookie(['qq','wx', 'tv'])">getCookie(['qq','wx', 'tv'])</button><br /><br />
+    
+    	<br><B style="color:Red">12，Cookie－获得当前用户主账号账号的cookie：目前“qq”，“wx”，“未登录”三种(600需求)</B><br>
+    	<button style="width:200px;height:50px;font-size:20px;" onclick="getMainCookie()">getMainCookie</button><br /><br />
+
+    	<br><B style="color:Red">13，View跳转－Native页面跳转操作(600需求)</B><br>
+    	<button style="width:300px;height:50px;font-size:20px;" onclick="openView('tenvideo2://?action=19')">openView明星主题首页</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="gotoHomepage()">gotoHomepage</button><br /><br />
+	
+	<br><B style="color:Red">14，View跳转－在新窗口打开url操作(600需求)</B><br>
+	<button style="width:500px;height:50px;font-size:20px;" onclick="openUrl('http://www.baidu.com')">openUrl('http://www.baidu.com')</button><br /><br />
+
+	<br><B>15，窗口关闭－关闭整个窗口</B><br>	
+	<button style="width:300px;height:50px;font-size:20px;" onclick="close()">close</button><br /><br />
+
+	<br><B>16，页面控制－返回前页面</B><br>	
+	<button style="width:300px;height:50px;font-size:20px;" onclick="goBack()">goBack</button><br /><br />
+
+	<br><B>17，页面控制－页面显示</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="showH5()">showH5</button><br /><br />
+
+	<br><B>18，页面控制－页面隐藏</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="hideH5()">hideH5</button><br /><br />
+
+	<br><B>19，页面控制－页面移除</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="closeH5()">closeH5</button><br /><br />
+
+	<br><B>20，页面状态－页面曝光</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="onPageAppear()">onPageAppear</button><br /><br />
+	
+	<br><B>21，页面状态－页面消失</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="onPageDisappear()">onPageDisappear</button><br /><br />
+	
+	<br><B style="color:Red">22，弹提示－弹一个Native的弱提示框(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="toast()">toast</button><br /><br />
+	
+	<br><B>23，用户反馈－点击反馈时上报本地日志</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="userFeedBack()">userFeedBack</button><br /><br />
+	
+	<br><B>24，写入本地日志－往本地日志系统写入日志</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="writeLog('加入日志')">writeLog('加入日志')</button><br /><br />
+		
+	<br><B style="color:Red">25，查询网络状态－0-无网络 1-wifi 2-2g 3-3g 4-4g 5-其他网络(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getNetworkState()">getNetworkState</button><br /><br />
+	
+	<br><B>26，获取渠道号－ChannelID</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getMarketChannelID()">getMarketChannelID</button><br /><br />
+	
+	<br><B>27，是否是新安装用户－按天计算</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getInstallUserState('1')">getInstallUserState('1')</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">二，UI样式控制</B><br>
+	<br><B>1，刷新标题接口(待补充)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="refreshTitle('刷新标题')">refreshTitle('刷新标题')</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">三，扩展功能</B><br>
+	<br><B style="color:Red">1，是否安装xxx app(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="isWXAppInstalled()">isWeiXinInstalled</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="isWXAppInstalled_iOS9()">isWeiXinInstalled_iOS9</button><br /><br />
+	
+	<br><B style="color:Red">2，打开xxx app(600需求)</B><br>
+        <br><B>(1)Weixin</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppPkgName('weixin')">launchAppPkgName</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppScheme('weixin')">launchAppScheme</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppSchemeWithParam('weixin')">launchAppSchemeWithParam</button><br /><br />
+	<br><B>(2)QQ</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppPkgName('mqqapi')">launchAppPkgName</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppScheme('mqqapi')">launchAppScheme</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppSchemeWithParam('mqqapi')">launchAppSchemeWithParam</button><br /><br />
+	<br><B>(3)腾讯新闻</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppPkgName('qqnews')">launchAppPkgName</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppScheme('qqnews')">launchAppScheme</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppSchemeWithParam('qqnews')">launchAppSchemeWithParam</button><br /><br />
+	<br><B>(4)QQ浏览器</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppPkgName('mqqbrowser')">launchAppPkgName</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppScheme('mqqbrowser')">launchAppScheme</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchAppSchemeWithParam('mqqbrowser')">launchAppSchemeWithParam</button><br /><br />
+	<br><B>(5)腾讯视频</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="launchTencentVideo()">launchTencentVideo</button><br /><br />
+
+	<br><B style="color:Red">3，获取地理位置(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getLocation()">getLocation</button><br /><br />
+	
+	<br><B>4，相册选择图片－保存图片到手机</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="saveImage('http://img5.douban.com/view/photo/photo/public/p2235250327.jpg')">saveImage</button><br /><br />
+	
+	<br><B>5，拉起微信支付－拉起微信App走支付流程</B><br>
+	
+	<br><B>6，代币加密TK－获取代币(钻石)转移用的加密TK字符串</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="genTansPropertyTK()">genTansPropertyTK</button><br /><br />
+	<br /><br />
+	
+	<br><B>7，下载第三方app-</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="download()">download</button><br /><br />
+	
+	<br><B style="font-size:40px;">四，会员相关</B><br>
+	<br><B>1，获取会员信息</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getPayVip()">getPayVip</button><br /><br />
+	
+	<br><B>2，获取观影券数量</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getTicketNum()">getTicketNum</button><br /><br />
+
+	<br><B>3，显示站内信入口</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="showMessageBtn()">显示站内信</button><br /><br />
+	
+	<br><B>4，隐藏站内信入口</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="hideMessageBtn()">隐藏站内信</button><br /><br />
+	
+	<br><B>5，单片支付(待补充)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="openPaySingle()">openPaySingle</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">五，饭团模块(待补充)</B><br>
+	<br /><br />
+	
+	<br><B style="font-size:40px;">六，游戏相关</B><br>
+	<br><B style="color:Red">1，点击图片放大(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="preViewPhotos()">preViewPhotos</button><br /><br />
+	
+	<br><B style="color:Red">2，剪切板复制(600需求)</B><br>
+	<button style="width:500px;height:50px;font-size:20px;" onclick="copyToClipBoard('剪切板复制')">copyToClipBoard('剪切板复制')</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">七，分享相关</B><br>
+	<br><B style="color:Red">1，拉起操作面板(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="openToolsDialog()">openToolsDialog</button><br /><br />
+	
+	<br><B>2，分享到微信朋友圈(待补充)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="shareInfo('shareWeixinTimeline')">shareWeiXinTimeline</button><br /><br />
+	
+	<br><B>3，分享到微信好友(待补充)</B><br>
+    	<button style="width:300px;height:50px;font-size:20px;" onclick="shareInfo('shareWeixinUser')">shareWeiXinUser</button><br /><br />
+	
+	<br><B>4，分享到QQ好友(待补充)</B><br>
+   	<button style="width:300px;height:50px;font-size:20px;" onclick="shareInfo('shareQQUser')">shareQQUser</button><br /><br />
+	
+	<br><B>5，分享到QQ空间(待补充)</B><br>
+   	<button style="width:300px;height:50px;font-size:20px;" onclick="shareInfo('shareQzone')">shareQzone</button><br /><br />
+	
+	<br><B>6，分享到新浪微博(待补充)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="shareInfo('shareSinaWeibo')">shareSinaWeibo</button><br /><br />
+	
+	<br><B>7，分享到腾讯微博(待补充)</B><br>
+   	<button style="width:300px;height:50px;font-size:20px;" onclick="shareInfo('shareTxWeibo')">shareTxWeibo</button><br /><br />
+  	
+	<br><B style="color:Red">8，分享本地图片(600需求)</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="shareLocalImage()">分享本地图片到QQ/微信</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">八，播放器相关</B><br>
+	<br><B>1，设置native播放器静音－如果页面上面有播放器，可以控制其是否静音</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="setPlayerMute('true')">setPlayerMute('true')</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="setPlayerMute('false')">setPlayerMute('false')</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">九，Push相关</B><br>
+	<br><B>1，获取当前push通道开关－获取当前push通道开关的状态</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="getPushSwitch">getPushSwitch</button><br /><br />
+	
+	<br><B>2，引导用户打开push通道开关－push通道开关未开启时，拉起引导用户打开push通道开关的页面</B><br>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="openPushSwitch()">openPushSwitch('true')</button>
+	<button style="width:300px;height:50px;font-size:20px;" onclick="closePushSwitch()">openPushSwitch('false')</button><br /><br />
+	<br /><br />
+	
+	<br><B style="font-size:40px;">十，通知</B><br>
+	<br><B style="color:Red">28，切换前后台通知－进入前台事件(600需求)</B><br>
+	<br><B style="color:Red">29，切换前后台通知－退到后台事件(600需求)</B><br>
+	<br><B style="color:Red">30，切换前后台通知－前台激活事件(600需求)</B><br>
+	<br><B style="color:Red">31，切换前后台通知－后台挂起事件(600需求)</B><br>
+	<br><B style="color:Red">32，登录通知(600需求)</B><br>
+	<br><B style="color:Red">33，登出通知(600需求)</B><br>
+	
+	
+
+	<br /><br />
+	<input style="width:500px;height:60px;font-size:40px;" type="text" id="apiResult" aria-label="apiResult" value=""/><br /><br />
 </div>
 <div id="hello_div"></div>
-<div>
-	<img id="img1" src=""/>
-</div>
+<div><img id="img1" src=""/></div>
 </body>
 </html>
