@@ -1,0 +1,161 @@
+<html>
+<head>
+	<title>test js api</title>
+	<meta http-equiv="Content-Type"  content="text/html;charset=utf8">
+	<!--
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"> 
+        -->
+	<script language="JavaScript" src="testjs.js"></script>
+	<script type="text/javascript">
+		function openPage() {
+			window.open("js_api_demo.html");
+		}
+		function locationPage() {
+			window.location.href="js_api_demo.html";
+		}
+		function test() {
+			alert("harray test");
+		}
+	</script>
+</head>
+
+<body  bgcolor="#ffffff">
+<h2 style="text-align:center">Test JS-API Page</h2>
+
+<div>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button>
+	<button onclick="aclose()">更新下标题：戳我戳我，关闭页面！！！！！</button><br /><br />
+	<button onclick="hideSkip(true)">隐藏跳过按钮</button>
+	<button onclick="hideSkip(false)">显示跳过按钮</button><br /><br />
+	<button onclick="test()">just test</button>
+	<button onclick="jsAlert()">js alert</button><br /><br />
+	<button onclick="download()">download</button>
+	<button onclick="toast()">toast</button>
+	<button onclick="qqVip2WX()">qqVip2WX</button>
+	<input type="text" id="apiResult" aria-label="apiResult" value=""/>
+	<br><B>Push自测</B><br>
+	<button onclick="getPushSwitch()">获取push开关状态</button>	
+	<button onclick="openPushSwitch()">引导用户打开push通道开关</button>
+        <br><B>Weixin</B><br>
+	<button onclick="launchAppPkgName('weixin')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('weixin')">launchAppScheme</button>
+	<br><B>QQ</B><br>
+	<button onclick="launchAppPkgName('mqqapi')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('mqqapi')">launchAppScheme</button>
+	<br><B>腾讯新闻</B><br>
+	<button onclick="launchAppPkgName('qqnews')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('qqnews')">launchAppScheme</button>
+	<br><B>QQ浏览器</B><br>
+	<button onclick="launchAppPkgName('mqqbrowser')">launchAppPkgName</button>
+	<button onclick="launchAppScheme('mqqbrowser')">launchAppScheme</button>
+	<br><B>复制cdkey</B><br>
+	<button onclick="copyClipBoard('eckd9sdfs76dsf756')">复制cdkey</button>
+	<br><B>复制UA</B><br>
+	<button onclick="copyUA()">复制UA</button>
+	<br><br>
+	<button onclick="launchTencentVideo()">launchTencentVideo</button>
+	<button onclick="openPage()">open page</button>
+    <button onclick="locationPage()">location page</button>
+	<a href="js_api_demo.html">href</a>
+	<button onclick="openUrl('http://harray.qq.com/jsapi/js_api_demo.html')">openUrl()</button>
+	<br><br>
+	<button onclick="goBack()">goBack</button>
+	<button onclick="aclose()">close</button>
+	<br><br>
+    <button onclick="setMoreInfo()">setMoreInfo</button>
+    <!--<button onclick="jumpInVideo()">jumpInVideo</button>-->
+    <button onclick="testCallback()">testCallback</button>
+    <button onclick="gotoHomepage()">gotoHomepage</button>
+    <!--<button id="btn_rain" onclick="showBackground()">rain</button>-->
+    <button onclick="checkApi()">checkApi</button><br><br>
+    <B>Login</B><br>
+    <button onclick="login('qq')">loginQQ</button>
+    <button onclick="login('wx')">loginWX</button>
+    <button onclick="login('tv')">loginTV</button>
+    <button onclick="getMainLogin()">getMainLogin</button><br><br>
+    <B>Check Login</B><br>
+    <button onclick="getUserInfo(['qq','wx', 'tv'])">getUserInfo(['qq','wx', 'tv'])</button>
+    <button onclick="getMainCookie()">getMainCookie</button>
+    <!--<button onclick="actionPlay({'vid':'b0016r7wjxj'})">actionPlay</button>-->
+    <button onclick="getAppInfo()">getAppInfo</button>
+    <button onclick="getDeviceInfo()">getDeviceInfo</button><br><br>
+    <button onclick="getMainLoginType()">getMainLoginType</button>
+    <button onclick="getMainUserInfo()">getMainUserInfo</button>
+    <button onclick="isAppInstalled()">isWeiXinInstalled</button>
+    <button onclick="isAppInstalled1()">isWeiXinInstalled1</button>
+    <button onclick="launchApp()">launchApp</button>
+    <button onclick="getInstallUserState()">getInstallUserState</button><br><br>
+    <input type="text" id="duration"/><button onclick="getInstallUserStateHarray()">检查间隔时间，是否新用户</button><br>
+    <button onclick="cacheVideo()">cacheVideo</button><br><br>
+    <button onclick="getNetworkState()">getNetworkState</button>
+    <button onclick="getLocation()">getLocation</button>
+    <button onclick="downloadFile()">downloadFile</button><br><br>
+    <button onclick="getPayVip()">getPayVip</button>
+    <button onclick="getTicketNum()">getTicketNum</button><br><br>
+    <button onclick="openView('tenvideo2://?action=19')">openView明星主题首页</button>
+    <br><br>
+    
+    <button onclick="shareInfo('shareWeixinTimeline')">shareWeiXinTimeline</button>
+    <button onclick="shareInfo('shareWeixinUser')">shareWeiXinUser</button>
+    <button onclick="shareInfo('shareQQUser')">shareQQUser</button><br><br>
+    <button onclick="shareInfo('shareQzone')">shareQzone</button>
+    <button onclick="shareInfo('shareTxWeibo')">shareTxWeibo</button>
+    <button onclick="shareInfo('shareSinaWeibo')">shareSinaWeibo</button><br><br>
+    <button onclick="actionFollow('lid')">栏目关注</button>
+    <button onclick="actionFollow('cid')">专辑关注</button>
+    <button onclick="actionFollow('vid')">单视频关注</button><br><br>
+    <button onclick="actionFollow('gamepid')">游戏直播关注</button>
+    <button onclick="actionFollow('sportpid')">体育直播关注</button>
+    <button onclick="actionFollow('newpid')">新直播关注</button><br><br>
+    <input type="file" id="file"/>
+    <input type="button" value="读取二进制" onclick="readAsbinaryString()"/>
+	<!--<input type="file" onchange="onFileChanged(this)"/>-->
+    <!--<button onclick="gotoDouban()">gotoDouban</button>-->
+    <!--<button onclick="hideH5()">hideH5</button>-->
+    
+    <br><br>
+    
+    <button onclick="switchLogin('qq')">切换帐号QQ</button>
+    <button onclick="switchLogin('wx')">切换帐号WX</button>
+
+    <br><br>
+	 
+    	<button onclick="shareFromH5()">shareFromH5</button>
+	<button onclick="shareTo()">shareTo</button>
+	<button onclick="showAppPage()">showAppPage</button>
+	<button onclick="openToolsDialog()">openToolsDialog</button><br><br>
+	<button onclick="getCookie(['qq','wx','tv'])">getCookie</button><br><br>
+	<button onclick="getVideoInfo()">getVideoInfo</button>
+	<button onclick="sendMessage()">sendMessage</button>
+	<button onclick="showLayout()">showLayout</button>
+	<button onclick="closeLayout()">closeLayout</button>
+	<button onclick="openStarRank()">openStarRank</button>
+	<button onclick="showH5()">showH5</button>
+	<button onclick="hideH5()">hideH5</button>
+	<button onclick="hasTapBackground()">hasTapBackground</button>
+    <br><br>
+    
+    <button onclick="showMessageBtn()">显示站内信</button>
+    <button onclick="hideMessageBtn()">隐藏站内信</button>
+    <button onclick="jumpWXBizProfile()">微信公众号</button>
+    <button onclick="genTansPropertyTK()">钻石转移TK</button>
+    <button onclick="hideJumpButton()">隐藏跳过按钮</button>
+    <button onclick="shareLocalImage()">分享本地图片到QQ/微信</button>
+    <!--<input type="text" id="apiResult" name="apiResult" value=""/>-->
+</div>
+<div>
+
+</div>
+<div id="hello_div"></div>
+<div>
+	<img id="img1" src=""/>
+</div>
+</body>
+</html>
