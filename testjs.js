@@ -405,12 +405,30 @@
        			// alert("onShareWeixinTimelineFinish");
  			//shareInfo("shareWeixinTimeline");
           	});
-         	TenvideoJSBridge.on("onActionLoginFinish", function(ret){
-			// alert("onActionLoginFinish: " + ret);
+			//登录通知
+         	TenvideoJSBridge.on("onActionLoginFinish", function(ret){  
+			 alert("onActionLoginFinish: " + ret);
          	});
+	    		//登出通知
          	TenvideoJSBridge.on("onActionLogoutFinish", function(ret){
- 			// alert("onActionLogoutFinish: " + ret);
+ 			 alert("onActionLogoutFinish: " + ret);
           	});
+	    		//进入前台事件
+         	TenvideoJSBridge.on("onAppEnterForeground", function(ret){
+ 			 alert("onAppEnterForeground: " + ret);
+          	});
+	    		//退到后台事件
+	 	TenvideoJSBridge.on("onAppEnterBackground", function(ret){
+ 			 alert("onAppEnterBackground: " + ret);
+          	});
+	    		//前台激活事件
+	 	TenvideoJSBridge.on("onAppDidBecomeActive", function(ret){
+ 			 alert("onAppDidBecomeActive: " + ret);
+          	});
+	    		//后台挂起事件
+	 	TenvideoJSBridge.on("onAppWillResignActive", function(ret){
+ 			 alert("onAppWillResignActive: " + ret);
+});
          	TenvideoJSBridge.on("onActionLogin", function(ret){
  			// alert("onActionLogin: " + ret);
           	});
