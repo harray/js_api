@@ -16,7 +16,7 @@
 		location.href = "txvideo://v.qq.com/TencentLiveActivity?pid=" + pid + "&style=1&streamStyle=1";
 	}
 	function gotoQAPid() {
-		var pid = document.getElementById("whymepid").value;
+		var pid = document.getElementById("qapid").value;
 		//location.href = "tenvideo2://?action=11&program_id=" + pid + "&program_type=0";
 		location.href = "txvideo://v.qq.com/LiveQAGameActivity?pid=" + pid;
 	}
@@ -30,7 +30,7 @@
 <br><br>
 <input type="text" id="pid"/><button onclick="gotoPid()">进入直播底层页</button><br>
 <input type="text" id="whymepid"/><button onclick="gotoWheMePid()">进入Why Me底层页</button><br>
-<input type="text" id="whymepid"/><button onclick="gotoQAPid()">进入直播答题底层页</button><br>
+<input type="text" id="qapid"/><button onclick="gotoQAPid()">进入直播答题底层页</button><br>
 <input type="text" id="starid"/><button onclick="gotoStarId()">进入明星饭团</button><br>
 <br><br>
 <a href="http://a.b.com/universalLink.html">universal link页面</a><br><br>
