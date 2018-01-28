@@ -337,6 +337,15 @@
 //31，切换前后台通知－后台挂起事件onAppWillResignActive
 //32，登录通知onActionLoginFinish
 //33，登出通知onActionLogoutFinish
+ 
+//34 直播答题使用
+function checkFunctionSupport(){
+	str = "1.9";
+	TenvideoJSBridge.invoke('checkFunctionSupport', {"functionType":"1", "functionDemandVersion":str} , function(ret){
+		alert(str);
+		alert(ret);
+	});
+}
 
 //其他未整理部分
     	if(typeof TenvideoJSBridge == "object"){
