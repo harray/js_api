@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<a href="tenvideoi18n://wetv/hometab?tabname=channel&channelid=1001">精选页</a><br><br>
+<a href="tenvideoi18n://wetv/hometab?tabname=channel&channelid=1002">电视剧频道</a><br><br>
+<a href="tenvideoi18n://wetv/hometab?tabname=channel&channelid=1003">综艺频道</a><br><br>
+<a href="tenvideoi18n://wetv/hometab?tabname=channel&channelid=1004">电影频道</a><br><br>
+<a href="tenvideoi18n://wetv/hometab?tabname=channel&channelid=1005">热点频道</a><br><br>
+<a href="tenvideoi18n://wetv/hometab?tabname=me">个人中心</a><br><br>
+<a href="tenvideoi18n://wetv/historypage">历史记录</a><br><br>
+<a href="tenvideoi18n://wetv/videodetail?vid=a0027z19apx&cid=0s5cpj3vu44lw9g">详情页</a><br><br>
+<a href="tenvideoi18n://wetv/searchpage?keyWord=沙海">搜索结果页</a><br><br>
+<a href="tenvideoi18n://wetv/videodetail?cid=0s5cpj3vu44lw9g&&vid=a0027z19apx">搜索剧集跳入详情页</a><br><br>
+<a href="tenvideoi18n://wetv/operationpage?dataKey=list_type%3dvideolist%26cid%3d1r52r8dc5w98fsr&title=%e6%b2%99%e6%b5%b7">二级页面跳转</a><br><br>
+<a href="tenvideoi18n://wetv/hometab?tabname=immersive&vid=g0030sqnxe9">沉浸式页面</a>
+<a href="">页面式</a>
+
+<br><br>
+</body>
+</html> 
